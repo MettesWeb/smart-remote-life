@@ -132,8 +132,8 @@ h1{margin:0;font-size:clamp(2.25rem,5vw,4.15rem);line-height:1;letter-spacing:-.
 
 .desktop-layout{
   width:min(1640px,calc(100% - 28px));margin:0 auto;
-  display:grid;grid-template-columns:minmax(190px,230px) minmax(0,980px) minmax(190px,230px);
-  gap:26px;align-items:start
+  display:grid;grid-template-columns:minmax(210px,280px) minmax(0,980px) minmax(210px,280px);
+  gap:24px;align-items:start
 }
 .side-note{
   position:sticky;top:18px;padding:21px;border-radius:26px;background:rgba(255,255,255,.90);
@@ -309,8 +309,35 @@ footer a{margin:0 6px}
 @media(max-width:520px){
   .intro-card,.card,.faq-card,.toc,.test-cta{padding:21px}
 }
+
+
+/* ===== Affiliate placement · final Europa layout ===== */
+.ad-rail{position:sticky;top:18px;align-self:start;display:flex;flex-direction:column;align-items:center;padding:8px 0 0;background:transparent;border:0;box-shadow:none}
+.ad-wrap{position:relative;display:flex;justify-content:center;width:100%;padding-top:10px}
+.ad-mark{position:absolute;top:-1px;left:50%;transform:translateX(-50%);z-index:2;color:#687384;font-size:.57rem;font-weight:850;letter-spacing:.04em;line-height:1;background:transparent;white-space:nowrap}
+.ad-link{display:block;text-decoration:none;line-height:0}
+.ad-link img{display:block;height:auto;max-width:100%;border:0}
+.ad-left .ad-link{width:120px;max-width:100%}
+.ad-left .ad-link img{width:120px;max-width:100%}
+.ad-right .ad-link{width:200px;max-width:100%}
+.ad-right .ad-link img{width:200px;max-width:100%}
+.leaderboard-ad{position:relative;margin:20px auto 30px;padding-top:11px;text-align:center}
+.leaderboard-ad .ad-mark{top:0}
+.leaderboard-ad .ad-link{display:block;width:min(900px,96%);margin:0 auto}
+.leaderboard-ad img{display:block;width:100%;height:auto;margin:0 auto;border:0}
+.mobile-side-ads{display:none}
+@media(max-width:1279px){
+  .desktop-layout>.ad-rail{display:none}
+  .mobile-side-ads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0 28px;align-items:start}
+  .mobile-ad-card{position:relative;display:flex;flex-direction:column;align-items:center;padding:14px 10px 10px;border-radius:24px;background:rgba(255,255,255,.94);border:1px solid var(--line);box-shadow:var(--shadow)}
+  .mobile-ad-card .ad-wrap{padding-top:8px}
+  .mobile-ad-card .ad-link{width:min(260px,100%)}
+  .mobile-ad-card img{width:100%;height:auto}
+}
+@media(max-width:620px){.mobile-side-ads{grid-template-columns:1fr}.leaderboard-ad{margin:16px auto 24px}.leaderboard-ad .ad-link{width:100%}}
+
 </style>
-<!-- Smart Remote Life · Europa Blog v5 · Nordmazedonien-Text + europäischer Header -->
+<!-- Smart Remote Life · Europa Blog FINAL v5 · Toolkit doppelt + kürzerer Header · 13.08.2026 -->
 </head>
 
 <body>
@@ -323,7 +350,7 @@ footer a{margin:0 6px}
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">🌍 Europa · Auswandern & Reiseziele</span>
-      <h1>Auswandern in Europa: 6 Länder für mehr Freiheit, Meer & Remote Work</h1>
+      <h1>Auswandern in Europa: 6 Länder</h1>
       <p>Wo kann man in Europa ruhig, sicher und bezahlbar leben – möglichst nah am Meer, mit gutem Internet und einem Alltag, der auch mit Kind funktioniert? Wir vergleichen sechs Ziele nach demselben 12-Punkte-Prüfraster.</p>
     </div>
   </div>
@@ -332,24 +359,13 @@ footer a{margin:0 6px}
 
 <main class="desktop-layout" id="main-content">
 
-  <aside class="side-note" aria-label="Das Smart Remote Life Prüfraster">
-    <h3>Unser Europa-Check</h3>
-    <p>Kein „bestes Land der Welt“-Ranking, sondern ein Filter für ein ruhigeres, flexibleres Leben.</p>
-    <ul>
-      <li>🛡️ Sicherheit</li>
-      <li>🏥 Gesundheit</li>
-      <li>💶 Kosten & Miete</li>
-      <li>💻 Remote Work</li>
-      <li>😌 Ruhe & Slow Life</li>
-      <li>🌴 Natur & Meer</li>
-      <li>🌊 Baden</li>
-      <li>🌤️ Klima</li>
-      <li>🌪️ Risiken</li>
-      <li>👦 Leben mit Kind</li>
-      <li>🕊️ Freiheit im Alltag</li>
-      <li>✈️ Erreichbarkeit</li>
-    </ul>
-    <p class="mini">Stand: August 2026 · Details können sich ändern.</p>
+  <aside class="ad-rail ad-left" aria-label="Werbung: Staatenlos Auswander-Lexikon">
+    <div class="ad-wrap">
+      <span class="ad-mark">Werbung</span>
+      <a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener" aria-label="Auswander-Lexikon von Staatenlos ansehen">
+        <img src="affiliate-staatenlos-auswanderlexikon.png" alt="Werbebanner für das Auswander-Lexikon von Staatenlos" loading="lazy">
+      </a>
+    </div>
   </aside>
 
   <div class="content-shell">
@@ -377,6 +393,13 @@ footer a{margin:0 6px}
 
         <div class="notice"><strong>Wichtig:</strong> Dieser Artikel zeigt unseren aktuellen Recherche- und Kenntnisstand und dient als erste Orientierung – nicht als individuelle Rechts-, Steuer-, Gesundheits- oder Auswanderungsberatung. Angaben und Bedingungen können sich ändern. <strong>Bitte prüfe alle für deine eigene Reise oder Auswanderung wichtigen Informationen vor einer Entscheidung immer noch einmal selbst anhand aktueller offizieller Quellen</strong> – insbesondere Sicherheit, Einreise- und Aufenthaltsrecht, Schule, Krankenversicherung, medizinische Versorgung, Steuern und konkrete Kosten.</div>
       </section>
+
+      <div class="leaderboard-ad" aria-label="Werbung: Freelancer Toolkit">
+        <span class="ad-mark">Werbung</span>
+        <a class="ad-link" href="https://bohle-digital.de/freelancer-toolkit/?aff=tiramcreations" target="_blank" rel="sponsored noopener" aria-label="Freelancer Toolkit ansehen">
+          <img src="affiliate-freelancer-toolkit.png" alt="Werbebanner für das Freelancer Toolkit" loading="lazy">
+        </a>
+      </div>
 
       <nav class="toc" aria-label="Inhaltsverzeichnis">
         <h2>Inhaltsübersicht</h2>
@@ -612,10 +635,36 @@ footer a{margin:0 6px}
       <p><strong>Ja – aber nicht überall gleich gut.</strong> Die wichtigste Stellschraube ist die Miete. In Albanien, Bulgarien, Nordmazedonien und günstigeren Orten Montenegros ist ein Zwei-Personen-Budget von rund 2.000 Euro deutlich realistischer als an der Algarve oder in bekannten kroatischen Küstenstädten.</p>
       <p>Wer nicht mitten im Hotspot wohnen muss, langfristig statt tageweise mietet und außerhalb der Hauptsaison sucht, verbessert die Chancen erheblich. Das eigentliche Ziel ist deshalb nicht „das billigste Land“, sondern der Ort mit der besten Kombination aus <strong>Miete + Sicherheit + Alltag + Internet + Meer</strong>.</p>
 
+      <div class="mobile-side-ads" aria-label="Affiliate-Empfehlungen">
+        <div class="mobile-ad-card">
+          <div class="ad-wrap">
+            <span class="ad-mark">Werbung</span>
+            <a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener" aria-label="Auswander-Lexikon von Staatenlos ansehen">
+              <img src="affiliate-staatenlos-auswanderlexikon.png" alt="Werbebanner für das Auswander-Lexikon von Staatenlos" loading="lazy">
+            </a>
+          </div>
+        </div>
+        <div class="mobile-ad-card">
+          <div class="ad-wrap">
+            <span class="ad-mark">Werbung</span>
+            <a class="ad-link" href="https://www.discovercars.com/?a_aid=Smart-Remote-Life" target="_blank" rel="sponsored noopener" aria-label="Mietwagen für eine Testreise bei DiscoverCars vergleichen">
+              <img src="affiliate-discovercars-testreise.png" alt="Werbebanner Mobil auf Testreise – Mietwagen für Europa flexibel vergleichen" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="mood-visual media-card">
         <img src="mood-remote-work.png" alt="Remote-Arbeitsplatz mit Laptop und weitem Naturblick als Symbol für Arbeiten unterwegs">
         <span class="ki-badge" aria-label="KI-generiertes Bild">KI</span>
         <span class="mood-caption">Remote-tauglich ist ein Ort erst, wenn der Alltag funktioniert – nicht nur das WLAN im Café.</span>
+      </div>
+
+      <div class="leaderboard-ad" aria-label="Werbung: Freelancer Toolkit">
+        <span class="ad-mark">Werbung</span>
+        <a class="ad-link" href="https://bohle-digital.de/freelancer-toolkit/?aff=tiramcreations" target="_blank" rel="sponsored noopener" aria-label="Freelancer Toolkit ansehen">
+          <img src="affiliate-freelancer-toolkit.png" alt="Werbebanner für das Freelancer Toolkit" loading="lazy">
+        </a>
       </div>
 
       <section class="test-cta" id="fazit">
@@ -684,15 +733,13 @@ footer a{margin:0 6px}
     </article>
   </div>
 
-  <aside class="side-note" aria-label="Schnellfazit Europa">
-    <h3>Mein Schnellfazit</h3>
-    <p><strong>Meer + Gesamtpaket:</strong><br>Montenegro</p>
-    <p><strong>Meer + Budget:</strong><br>Albanien</p>
-    <p><strong>Sicherheit + Adria:</strong><br>Kroatien</p>
-    <p><strong>Preis-Leistung:</strong><br>Bulgarien</p>
-    <p><strong>Infrastruktur:</strong><br>Portugal</p>
-    <p><strong>Ruhe + günstig:</strong><br>Nordmazedonien</p>
-    <p class="mini">Erst testen. Dann streng prüfen.</p>
+  <aside class="ad-rail ad-right" aria-label="Werbung: DiscoverCars Mietwagenvergleich">
+    <div class="ad-wrap">
+      <span class="ad-mark">Werbung</span>
+      <a class="ad-link" href="https://www.discovercars.com/?a_aid=Smart-Remote-Life" target="_blank" rel="sponsored noopener" aria-label="Mietwagen für eine Testreise bei DiscoverCars vergleichen">
+        <img src="affiliate-discovercars-testreise.png" alt="Werbebanner Mobil auf Testreise – Mietwagen für Europa flexibel vergleichen" loading="lazy">
+      </a>
+    </div>
   </aside>
 
 </main>
@@ -704,6 +751,7 @@ footer a{margin:0 6px}
   <a href="disclaimer.html">Disclaimer</a>
   <div class="footer-note">* Preis- und Mietangaben: Stand August 2026. Preise können sich jederzeit ändern und unterscheiden sich je nach Ort, Saison, Ausstattung, Vertragsdauer und Quelle.</div>
   <div class="footer-note">Reise-, Sicherheits-, Gesundheits- und Kostendaten können sich ändern. Bitte prüfe aktuelle Angaben vor jeder Reise oder Auswanderungsentscheidung selbst noch einmal bei geeigneten offiziellen bzw. aktuellen Quellen.</div>
+  <div class="footer-note">Werbehinweis: Die drei mit „Werbung“ gekennzeichneten Banner für das Auswander-Lexikon, das Freelancer Toolkit und DiscoverCars enthalten Affiliate-Links. Bei einem Kauf oder einer Buchung kann Smart Remote Life eine Provision erhalten; für dich ändert sich der Preis dadurch nicht.</div>
   <div style="margin-top:8px">© Smart Remote Life</div>
 </footer>
 </body>
