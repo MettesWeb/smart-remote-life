@@ -20,33 +20,28 @@
   "mainEntity":[
     {
       "@type":"Question",
-      "name":"Welches Land in Europa eignet sich zum Auswandern ans Meer?",
-      "acceptedAnswer":{"@type":"Answer","text":"Für ein ruhiges Leben am Meer sind je nach Budget und Prioritäten besonders Montenegro, Albanien, Kroatien und Bulgarien interessant. Portugal bietet sehr gute Infrastruktur und Gesundheitsversorgung, ist an der Algarve aber deutlich teurer."}
+      "name":"Wo kann man in Europa noch günstig am Meer leben?",
+      "acceptedAnswer":{"@type":"Answer","text":"Besonders interessant sind kleinere Orte in Albanien, Bulgarien und Montenegro. Auch außerhalb bekannter kroatischer Küstenhotspots können die Kosten niedriger liegen. Entscheidend sind Ort, Saison und Mietdauer."}
     },
     {
       "@type":"Question",
-      "name":"Wo kann man in Europa noch relativ günstig am Meer leben?",
-      "acceptedAnswer":{"@type":"Answer","text":"Im Vergleich zu vielen westeuropäischen Küstenregionen sind Teile Albaniens, Bulgariens und kleinere Küstenorte Montenegros oft günstiger. Saison, Ort und Mietdauer machen allerdings einen großen Unterschied."}
+      "name":"Kann man zu zweit mit rund 2.000 Euro im Monat wirklich gut leben?",
+      "acceptedAnswer":{"@type":"Answer","text":"In günstigeren Regionen Albaniens, Bulgariens, Nordmazedoniens und teilweise Montenegros ist ein Zwei-Personen-Budget von rund 2.000 Euro deutlich realistischer als an der Algarve oder in bekannten kroatischen Küstenstädten."}
     },
     {
       "@type":"Question",
-      "name":"Welche europäischen Länder eignen sich für Remote Work?",
-      "acceptedAnswer":{"@type":"Answer","text":"Alle sechs verglichenen Länder können für Remote Work interessant sein. Entscheidend ist die konkrete Unterkunft: Vor längeren Aufenthalten sollten Festnetzgeschwindigkeit, Mobilfunkabdeckung und Stromversorgung für die gewünschte Adresse geprüft werden."}
+      "name":"Sind Langzeitmieten von etwa 250 bis 400 Euro noch realistisch?",
+      "acceptedAnswer":{"@type":"Answer","text":"In touristischen Hotspots ist dieses Mietbudget schwierig. In kleineren Orten, bei Langzeitmiete und außerhalb der Hauptsaison kann es in Teilen Albaniens, Bulgariens und Montenegros noch erreichbar sein. Aktuelle lokale Angebote müssen separat geprüft werden."}
     },
     {
       "@type":"Question",
-      "name":"Welches Land ist für ein Leben mit Kind besonders interessant?",
-      "acceptedAnswer":{"@type":"Answer","text":"Kroatien und Portugal punkten bei medizinischer Infrastruktur und Alltagssicherheit. Montenegro, Albanien und Bulgarien können bei Kosten, Küstennähe und ruhigem Lebensgefühl attraktiver sein. Schule und Aufenthaltsrecht sollten bei echten Auswanderungskandidaten separat geprüft werden."}
+      "name":"Wo kann man sich als Frau mit Kind besonders sicher fühlen?",
+      "acceptedAnswer":{"@type":"Answer","text":"Kroatien, Montenegro und Nordmazedonien schneiden beim Thema Alltagssicherheit interessant ab. Für Familien sollte neben Kriminalität immer auch die Erreichbarkeit medizinischer Versorgung berücksichtigt werden."}
     },
     {
       "@type":"Question",
-      "name":"Kann man mit 2.000 Euro im Monat zu zweit in Europa gut leben?",
-      "acceptedAnswer":{"@type":"Answer","text":"Das ist in günstigeren Regionen Albaniens, Bulgariens, Nordmazedoniens und teilweise Montenegros deutlich realistischer als an der Algarve oder in stark touristischen Küstenorten Kroatiens. Die Miete ist dabei der wichtigste Kostenfaktor."}
-    },
-    {
-      "@type":"Question",
-      "name":"Welches Land ist der beste erste Testkandidat?",
-      "acceptedAnswer":{"@type":"Answer","text":"Für die hier verwendeten Kriterien ist Montenegro ein besonders ausgewogener Testkandidat: nah an Deutschland, Adriaküste, ruhige kleinere Orte und grundsätzlich niedrige Kriminalität. Abstriche gibt es bei medizinischer Versorgung und in touristischen Küstenorten beim Mietbudget."}
+      "name":"Wo ist die medizinische Versorgung gut – und wo muss man Abstriche machen?",
+      "acceptedAnswer":{"@type":"Answer","text":"Portugal und Kroatien bieten im Vergleich eine stärkere medizinische Infrastruktur. In Montenegro, Albanien, Bulgarien und Nordmazedonien kann die Versorgung regional deutlich unterschiedlicher sein, weshalb der konkrete Wohnort wichtig ist."}
     }
   ]
 }
@@ -168,6 +163,22 @@ p{margin:0 0 16px}
 }
 .criterion b{display:block;margin-bottom:4px;color:#2f617b;font-size:.91rem}
 .criterion span{font-size:.79rem;color:var(--muted)}
+
+.question-nav h2{margin:0 0 8px;font-size:1.32rem}
+.question-nav .question-intro{margin:0 0 9px;color:var(--muted);font-size:.86rem}
+.question-nav details{border-top:1px solid rgba(45,91,115,.10);padding:0}
+.question-nav details:first-of-type{border-top:0}
+.question-nav summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:850;color:#315f79;font-size:.91rem}
+.question-nav summary::-webkit-details-marker{display:none}
+.question-nav summary::before{content:"▸";display:inline-block;width:18px;color:var(--gold);font-weight:950;transition:transform .18s ease}
+.question-nav details[open] summary::before{transform:rotate(90deg)}
+.question-nav .question-answer{padding:0 0 13px 18px;color:var(--muted);font-size:.82rem;line-height:1.58}
+.question-nav .jump-link{display:inline-block;margin-top:5px;font-weight:850;text-decoration:none;color:#356e8d}
+
+.feature-affiliate{position:relative;width:min(620px,100%);margin:30px auto 36px;padding-top:12px;text-align:center}
+.feature-affiliate .ad-mark{position:static;display:block;transform:none;margin:0 0 7px;color:#687384;font-size:.58rem;font-weight:850;letter-spacing:.04em;line-height:1}
+.feature-affiliate .ad-link{display:block;width:100%;margin:0 auto;line-height:0}
+.feature-affiliate img{display:block;width:100%;height:auto;margin:0 auto;border:0;border-radius:24px;box-shadow:0 15px 38px rgba(33,75,96,.10)}
 
 .toc h2{margin:0 0 12px;font-size:1.25rem}
 .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
@@ -344,7 +355,7 @@ footer a{margin:0 6px}
 }
 
 </style>
-<!-- Smart Remote Life · Europa Blog FINAL v6 MOBILE · Toolkit doppelt + kürzerer Header · 13.08.2026 -->
+<!-- Smart Remote Life · Europa Blog FINAL v7 · kompakte W-Fragen + großer Staatenlos-Banner · 13.08.2026 -->
 </head>
 
 <body>
@@ -408,23 +419,30 @@ footer a{margin:0 6px}
         </a>
       </div>
 
-      <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <h2>Inhaltsübersicht</h2>
-        <div class="toc-grid">
-          <a href="#welches-land">Welches Land passt am besten?</a>
-          <a href="#guenstig">Wo kann man günstig am Meer leben?</a>
-          <a href="#montenegro">Montenegro</a>
-          <a href="#albanien">Albanien</a>
-          <a href="#portugal">Portugal / Algarve</a>
-          <a href="#kroatien">Kroatien</a>
-          <a href="#bulgarien">Bulgarien</a>
-          <a href="#nordmazedonien">Nordmazedonien</a>
-          <a href="#remote">Wo funktioniert Remote Work gut?</a>
-          <a href="#kind">Welches Land passt mit Kind?</a>
-          <a href="#budget">Reichen 2.000 € im Monat?</a>
-          <a href="#fazit">Unser Europa-Fazit</a>
-        </div>
-      </nav>
+      <section class="toc question-nav" aria-label="Die wichtigsten Fragen zum Auswandern in Europa">
+        <h2>Die wichtigsten Fragen vor dem Auswandern</h2>
+        <p class="question-intro">Fünf Fragen, die bei einem längeren Aufenthalt schnell wichtiger werden als das schönste Urlaubsfoto.</p>
+        <details>
+          <summary>Wo kann man in Europa noch günstig am Meer leben?</summary>
+          <div class="question-answer">Besonders interessant sind kleinere Orte in Albanien, Bulgarien und Montenegro. Auch abseits bekannter kroatischer Hotspots kann es günstiger werden. <a class="jump-link" href="#guenstig">Zum Kostenvergleich ↓</a></div>
+        </details>
+        <details>
+          <summary>Kann man zu zweit mit rund 2.000 € im Monat wirklich gut leben?</summary>
+          <div class="question-answer">Das ist in mehreren Balkanregionen deutlich realistischer als an der Algarve oder in bekannten kroatischen Küstenstädten. Die größte Stellschraube bleibt die Miete. <a class="jump-link" href="#budget">Zum Budget-Check ↓</a></div>
+        </details>
+        <details>
+          <summary>Sind Langzeitmieten von etwa 250–400 € noch realistisch?</summary>
+          <div class="question-answer">In touristischen Hotspots selten. In kleineren Orten, mit Langzeitvertrag und außerhalb der Hauptsaison kann das Ziel teilweise noch erreichbar sein. <a class="jump-link" href="#guenstig">Zu den Mietpreisen ↓</a></div>
+        </details>
+        <details>
+          <summary>Wo kann man sich als Frau mit Kind besonders sicher fühlen?</summary>
+          <div class="question-answer">Wir schauen nicht nur auf Kriminalität, sondern auch auf Alltag, medizinische Erreichbarkeit und die Frage, wie entspannt ein längerer Aufenthalt praktisch wäre. <a class="jump-link" href="#kind">Zum Familien-Check ↓</a></div>
+        </details>
+        <details>
+          <summary>Wo ist die medizinische Versorgung gut – und wo muss man Abstriche machen?</summary>
+          <div class="question-answer">Portugal und Kroatien sind strukturell stärker. In den günstigeren Balkanländern hängt deutlich mehr vom konkreten Ort ab. <a class="jump-link" href="#vergleich">Zum Länder-Vergleich ↓</a></div>
+        </details>
+      </section>
 
       <h2 id="welches-land">Welches Land in Europa eignet sich zum Auswandern – wenn Meer, Ruhe und Remote Work wichtig sind?</h2>
       <p>Für genau dieses Prüfraster stechen vor allem <strong>Montenegro, Albanien, Kroatien und Bulgarien</strong> hervor, weil sie Meerzugang mit vergleichsweise kurzen Reisewegen aus Deutschland verbinden. Portugal ist infrastrukturell sehr stark, scheitert aber schneller am niedrigen Mietbudget. Nordmazedonien ist dagegen spannend für Ruhe und Kosten – hat aber kein Meer.</p>
@@ -438,7 +456,7 @@ footer a{margin:0 6px}
         <div class="quick"><b>Nordmazedonien</b><span>Ruhig, günstig und sicher – Ohrid und Struga sind wunderschön, aber anstelle einem Meer gibt es einen wunderschönen See.</span><span class="tag">Slow Life</span></div>
       </div>
 
-      <div class="table-wrap" role="region" aria-label="Schnellvergleich der sechs europäischen Ziele" tabindex="0">
+      <div class="table-wrap" id="vergleich" role="region" aria-label="Schnellvergleich der sechs europäischen Ziele" tabindex="0">
         <table class="compare-table">
           <thead>
             <tr>
@@ -462,17 +480,11 @@ footer a{margin:0 6px}
         </table>
       </div>
 
-      <div class="mobile-inline-ad horizontal" aria-label="Werbung: Staatenlos Auswander-Lexikon">
+      <div class="feature-affiliate" aria-label="Werbung: Staatenlos Auswander-Lexikon">
         <span class="ad-mark">Werbung</span>
         <a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener" aria-label="Auswander-Lexikon von Staatenlos ansehen">
-          <img src="affiliate-staatenlos-mobile-468x60.png" alt="Werbebanner Auswander-Lexikon von Staatenlos" loading="lazy">
+          <img src="affiliate-staatenlos-feature-1080.jpg" alt="Staatenlos Auswander-Lexikon – Zitat über bewusstes Auswandern" loading="lazy">
         </a>
-      </div>
-
-      <div class="mood-visual media-card">
-        <img src="mood-remote-coast.png" alt="Laptop an einer ruhigen Küste mit Blick auf blaues Meer als Symbol für ortsunabhängiges Leben">
-        <span class="ki-badge" aria-label="KI-generiertes Bild">KI</span>
-        <span class="mood-caption">Der Traum ist nicht „Urlaub für immer“ – sondern ein Alltag, der sich leichter anfühlt.</span>
       </div>
 
       <h2 id="guenstig">Wo kann man in Europa noch günstig am Meer leben?</h2>
@@ -681,34 +693,6 @@ footer a{margin:0 6px}
           <span>⭐ Nordmazedonien – Slow Life ohne Meer</span>
         </div>
         <p style="margin-top:17px"><strong>Nächster Schritt:</strong> Wenn eines dieser Länder im echten Aufenthalt überzeugt, prüfen wir es anschließend separat nach Visum/Aufenthaltsrecht, Schule, Krankenversicherung, Steuern und konkretem Langzeit-Mietmarkt.</p>
-      </section>
-
-      <section class="faq-card">
-        <h2 style="margin-top:0">Häufige Fragen zum Auswandern in Europa</h2>
-        <details>
-          <summary>Welches Land in Europa eignet sich zum Auswandern ans Meer?</summary>
-          <p>Für ein ruhiges Leben am Meer sind je nach Budget besonders Montenegro, Albanien, Kroatien und Bulgarien interessant. Portugal bietet sehr gute Infrastruktur, ist an der Algarve aber deutlich teurer.</p>
-        </details>
-        <details>
-          <summary>Wo kann man in Europa noch relativ günstig am Meer leben?</summary>
-          <p>Teile Albaniens und Bulgariens sowie kleinere Orte in Montenegro gehören zu den interessanteren Kandidaten. Auch in Kroatien können kleinere Orte günstiger sein als die bekannten Küstenstädte.</p>
-        </details>
-        <details>
-          <summary>Welches Land ist für Remote Work am unkompliziertesten?</summary>
-          <p>Portugal und Kroatien sind infrastrukturell besonders bequem. In den günstigeren Balkanländern kann Remote Work ebenfalls sehr gut funktionieren, wenn die konkrete Unterkunft vorab auf Internet und Mobilfunk geprüft wird.</p>
-        </details>
-        <details>
-          <summary>Wo ist es mit Kind besonders sicher?</summary>
-          <p>Kroatien punktet mit sehr geringer Straßenkriminalität. Auch Nordmazedonien wird mit niedriger allgemeiner Kriminalitätsrate beschrieben. Für Familien zählt zusätzlich die Nähe zu medizinischer Versorgung.</p>
-        </details>
-        <details>
-          <summary>Kann ich für 250 bis 400 Euro im Monat am Meer wohnen?</summary>
-          <p>In touristischen Hotspots wird das schwierig. In kleineren Orten, bei Langzeitmiete und außerhalb der Hauptsaison kann das Ziel in Teilen Albaniens, Bulgariens und Montenegros noch erreichbar sein. Aktuelle lokale Angebote müssen immer separat geprüft werden.</p>
-        </details>
-        <details>
-          <summary>Welches Ziel würden wir zuerst ausprobieren?</summary>
-          <p>Montenegro. Es verbindet Meer, kurze Anreise, relativ hohe Alltagssicherheit und viele kleinere Küstenorte. Der wichtigste Punkt für einen längeren Aufenthalt wäre die Wahl eines Ortes mit guter medizinischer Erreichbarkeit.</p>
-        </details>
       </section>
 
       <section class="sources">
