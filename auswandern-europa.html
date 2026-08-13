@@ -325,19 +325,26 @@ footer a{margin:0 6px}
 .leaderboard-ad .ad-mark{top:0}
 .leaderboard-ad .ad-link{display:block;width:min(900px,96%);margin:0 auto}
 .leaderboard-ad img{display:block;width:100%;height:auto;margin:0 auto;border:0}
-.mobile-side-ads{display:none}
+.mobile-inline-ad{display:none}
 @media(max-width:1279px){
   .desktop-layout>.ad-rail{display:none}
-  .mobile-side-ads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0 28px;align-items:start}
-  .mobile-ad-card{position:relative;display:flex;flex-direction:column;align-items:center;padding:14px 10px 10px;border-radius:24px;background:rgba(255,255,255,.94);border:1px solid var(--line);box-shadow:var(--shadow)}
-  .mobile-ad-card .ad-wrap{padding-top:8px}
-  .mobile-ad-card .ad-link{width:min(260px,100%)}
-  .mobile-ad-card img{width:100%;height:auto}
+  .mobile-inline-ad{display:block;margin:22px auto 30px;text-align:center}
+  .mobile-inline-ad .ad-mark{position:static;display:block;transform:none;margin:0 0 7px;color:#687384;font-size:.58rem;font-weight:850;letter-spacing:.04em;line-height:1}
+  .mobile-inline-ad .ad-link{display:block;margin:0 auto}
+  .mobile-inline-ad.horizontal .ad-link{width:min(720px,100%)}
+  .mobile-inline-ad.horizontal img{display:block;width:100%;height:auto;margin:0 auto}
+  .mobile-inline-ad.vertical .ad-link{width:min(260px,72vw)}
+  .mobile-inline-ad.vertical img{display:block;width:100%;height:auto;margin:0 auto}
 }
-@media(max-width:620px){.mobile-side-ads{grid-template-columns:1fr}.leaderboard-ad{margin:16px auto 24px}.leaderboard-ad .ad-link{width:100%}}
+@media(max-width:620px){
+  .leaderboard-ad{margin:16px auto 24px}
+  .leaderboard-ad .ad-link{width:100%}
+  .mobile-inline-ad{margin:18px auto 26px}
+  .mobile-inline-ad.vertical .ad-link{width:min(250px,78vw)}
+}
 
 </style>
-<!-- Smart Remote Life · Europa Blog FINAL v5 · Toolkit doppelt + kürzerer Header · 13.08.2026 -->
+<!-- Smart Remote Life · Europa Blog FINAL v6 MOBILE · Toolkit doppelt + kürzerer Header · 13.08.2026 -->
 </head>
 
 <body>
@@ -453,6 +460,13 @@ footer a{margin:0 6px}
             <tr><td>Nordmazedonien</td><td class="fit-high">sehr interessant</td><td class="fit-high">niedrige Kriminalität</td><td class="fit-mid">Skopje besser als Regionen</td><td class="fit-low">kein Meer</td><td class="fit-high">gut prüfbar</td><td>stark für Ruhe, nicht für Meer</td></tr>
           </tbody>
         </table>
+      </div>
+
+      <div class="mobile-inline-ad horizontal" aria-label="Werbung: Staatenlos Auswander-Lexikon">
+        <span class="ad-mark">Werbung</span>
+        <a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener" aria-label="Auswander-Lexikon von Staatenlos ansehen">
+          <img src="affiliate-staatenlos-mobile-468x60.png" alt="Werbebanner Auswander-Lexikon von Staatenlos" loading="lazy">
+        </a>
       </div>
 
       <div class="mood-visual media-card">
@@ -623,6 +637,13 @@ footer a{margin:0 6px}
         <p class="data-note">Struga und Skopje liegen bei Langzeitmieten deutlich unter vielen westeuropäischen Vergleichsorten. Lokale Angebote und Jahreszeit bleiben entscheidend.</p>
       </section>
 
+      <div class="mobile-inline-ad vertical" aria-label="Werbung: DiscoverCars Mietwagenvergleich">
+        <span class="ad-mark">Werbung</span>
+        <a class="ad-link" href="https://www.discovercars.com/?a_aid=Smart-Remote-Life" target="_blank" rel="sponsored noopener" aria-label="Mietwagen für eine Testreise bei DiscoverCars vergleichen">
+          <img src="affiliate-discovercars-testreise.png" alt="Werbebanner Mobil auf Testreise – Mietwagen für Europa flexibel vergleichen" loading="lazy">
+        </a>
+      </div>
+
       <h2 id="remote">Welche Länder in Europa eignen sich besonders für Remote Work?</h2>
       <p>Für Remote Work ist nicht das Land allein entscheidend, sondern die <strong>konkrete Adresse</strong>. Selbst in einem digital gut aufgestellten Land kann eine abgelegene Ferienwohnung schlechtes WLAN haben. Vor einer Langzeitbuchung würde ich deshalb immer einen Screenshot eines aktuellen Speedtests verlangen und zusätzlich prüfen, welcher Mobilfunkanbieter am Standort die beste Abdeckung hat.</p>
       <div class="answer-box"><strong>Praktisch am einfachsten:</strong> Portugal und Kroatien. <strong>Besonders interessant beim Preis-Leistungs-Verhältnis:</strong> Bulgarien, Albanien, Nordmazedonien und kleinere Orte Montenegros – vorausgesetzt, Internet und Strom werden vorab konkret geprüft.</div>
@@ -634,25 +655,6 @@ footer a{margin:0 6px}
       <h2 id="budget">Kann man mit ungefähr 2.000 Euro im Monat zu zweit gut in Europa leben?</h2>
       <p><strong>Ja – aber nicht überall gleich gut.</strong> Die wichtigste Stellschraube ist die Miete. In Albanien, Bulgarien, Nordmazedonien und günstigeren Orten Montenegros ist ein Zwei-Personen-Budget von rund 2.000 Euro deutlich realistischer als an der Algarve oder in bekannten kroatischen Küstenstädten.</p>
       <p>Wer nicht mitten im Hotspot wohnen muss, langfristig statt tageweise mietet und außerhalb der Hauptsaison sucht, verbessert die Chancen erheblich. Das eigentliche Ziel ist deshalb nicht „das billigste Land“, sondern der Ort mit der besten Kombination aus <strong>Miete + Sicherheit + Alltag + Internet + Meer</strong>.</p>
-
-      <div class="mobile-side-ads" aria-label="Affiliate-Empfehlungen">
-        <div class="mobile-ad-card">
-          <div class="ad-wrap">
-            <span class="ad-mark">Werbung</span>
-            <a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener" aria-label="Auswander-Lexikon von Staatenlos ansehen">
-              <img src="affiliate-staatenlos-auswanderlexikon.png" alt="Werbebanner für das Auswander-Lexikon von Staatenlos" loading="lazy">
-            </a>
-          </div>
-        </div>
-        <div class="mobile-ad-card">
-          <div class="ad-wrap">
-            <span class="ad-mark">Werbung</span>
-            <a class="ad-link" href="https://www.discovercars.com/?a_aid=Smart-Remote-Life" target="_blank" rel="sponsored noopener" aria-label="Mietwagen für eine Testreise bei DiscoverCars vergleichen">
-              <img src="affiliate-discovercars-testreise.png" alt="Werbebanner Mobil auf Testreise – Mietwagen für Europa flexibel vergleichen" loading="lazy">
-            </a>
-          </div>
-        </div>
-      </div>
 
       <div class="mood-visual media-card">
         <img src="mood-remote-work.png" alt="Remote-Arbeitsplatz mit Laptop und weitem Naturblick als Symbol für Arbeiten unterwegs">
