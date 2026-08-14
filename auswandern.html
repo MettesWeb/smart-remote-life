@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auswandern: Länderchecks nach Kontinent | Smart Remote Life</title>
+<meta name="description" content="Auswandern mit Plan: Smart Remote Life vergleicht Länder nach 12 Kriterien wie Sicherheit, Kosten, Langzeitmiete, Remote Work, Medizin, Meer, Klima und Leben mit Kind. Entdecke unsere Länderchecks nach Kontinent.">
+<link rel="canonical" href="https://smart-remote-life.com/auswandern.html">
+<style>
+:root{--ink:#102033;--muted:#5f6d84;--paper:#fffdfb;--white:#fff;--sky:#9ad7ff;--mint:#b9f3df;--green:#9fd8ae;--gold:#d9aa45;--line:rgba(45,91,115,.13);--shadow:0 18px 50px rgba(33,75,96,.10)}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65;background:linear-gradient(rgba(47,128,237,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(47,128,237,.055) 1px,transparent 1px),radial-gradient(circle at top left,rgba(154,215,255,.38),transparent 34%),radial-gradient(circle at 80% 10%,rgba(244,183,201,.35),transparent 30%),linear-gradient(135deg,#fffdfb 0%,#f6f4ff 42%,#eefaff 100%);background-size:38px 38px,38px 38px,auto,auto,auto;min-height:100vh}
+a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:18px 0 0}.home-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px rgba(35,82,104,.08);text-decoration:none}
+.hero{width:min(1120px,calc(100% - 32px));margin:14px auto 30px;padding:46px 44px;border-radius:34px;background:linear-gradient(135deg,rgba(239,250,255,.98),rgba(255,255,255,.98) 58%,rgba(239,251,245,.98));border:1px solid var(--line);box-shadow:var(--shadow);text-align:center}
+.eyebrow{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(185,243,223,.48);color:#39785f;font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}h1{margin:14px 0 12px;font-size:clamp(2.4rem,5vw,4.35rem);line-height:1;letter-spacing:-.055em}.hero p{max-width:780px;margin:0 auto;color:#526276;font-size:1.02rem}
+.layout{width:min(1640px,calc(100% - 28px));margin:0 auto;display:grid;grid-template-columns:minmax(180px,250px) minmax(0,980px) minmax(180px,250px);gap:22px;align-items:start}.ad-rail{position:sticky;top:18px;display:flex;justify-content:center;padding-top:10px}.ad-wrap{position:relative;padding-top:10px}.ad-mark{display:block;text-align:center;color:#687384;font-size:.58rem;font-weight:850;margin-bottom:6px}.ad-link{display:block;line-height:0}.ad-left img{width:120px;max-width:100%;height:auto}.ad-right img{width:200px;max-width:100%;height:auto}.content{min-width:0}
+.intro{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow);margin-bottom:24px}.intro h2{margin:0 0 10px;font-size:1.55rem}.criteria{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.criteria span{padding:8px 11px;border-radius:999px;background:#f3fbf7;border:1px solid rgba(90,160,125,.12);font-size:.77rem;font-weight:800;color:#39785f}
+.leaderboard{margin:18px auto 30px;text-align:center}.leaderboard img{display:block;width:min(900px,100%);height:auto;margin:0 auto}.cards{display:grid;grid-template-columns:1fr;gap:22px}.continent{position:relative;overflow:hidden;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}.continent-media{height:245px;position:relative;background:linear-gradient(135deg,#eaf7ff,#effbf5 55%,#fff8e7);overflow:hidden}.continent-media img{width:100%;height:100%;object-fit:cover;display:block}.continent-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.93),rgba(255,255,255,.72) 48%,rgba(255,255,255,.08) 78%)}.continent-copy{position:absolute;z-index:2;left:30px;top:50%;transform:translateY(-50%);max-width:58%}.continent-copy h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,2.65rem);line-height:1.06;letter-spacing:-.04em}.continent-copy p{margin:0;color:#516075;font-size:.88rem}.continent-actions{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px 20px;background:#fff}.read-link{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:#eef9ff;color:#315f79;text-decoration:none;font-weight:900;font-size:.78rem}.badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#eafcf5;color:#39785f;font-size:.7rem;font-weight:900}.badge.soon{background:#def7e9;color:#17704b}.ai{position:absolute;right:10px;bottom:8px;z-index:3;color:rgba(255,255,255,.84);font-size:.58rem;font-weight:800;text-shadow:0 1px 2px rgba(16,32,51,.7)}
+.placeholder .continent-media{height:205px;background:linear-gradient(135deg,#edf9ff 0%,#f7faff 48%,#eefbf4 100%)}.placeholder .continent-media::after{background:none}.placeholder .continent-copy{max-width:76%}.placeholder .continent-copy p{color:#6a7584}.placeholder .continent-actions{border-top:1px solid rgba(45,91,115,.08)}
+.feature-ad{width:min(620px,100%);margin:30px auto;text-align:center}.feature-ad img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 15px 38px rgba(33,75,96,.10)}
+.footer-note{width:min(980px,calc(100% - 32px));margin:36px auto 0;padding:24px 0 40px;text-align:center;color:#7a8190;font-size:.78rem}.footer-note a{margin:0 5px}
+.mobile-ad{display:none}
+@media(max-width:1279px){.layout{width:min(980px,calc(100% - 32px));grid-template-columns:1fr}.ad-rail{display:none}.mobile-ad{display:block;margin:18px auto 28px;text-align:center}.mobile-ad img{width:min(240px,75vw);height:auto}}
+@media(max-width:720px){.hero{padding:30px 22px}.continent-media{height:310px}.continent-media::after{background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.82) 57%,rgba(255,255,255,.13))}.continent-copy{left:22px;right:22px;top:28px;transform:none;max-width:none}.continent-actions{align-items:flex-start;flex-direction:column}.placeholder .continent-media{height:190px}.placeholder .continent-copy{max-width:none}.intro{padding:22px}}
+</style>
+</head>
+<body>
+<div class="topbar"><a class="home-btn" href="index.html" aria-label="Zur Startseite">⌂</a></div>
+<header class="hero">
+  <span class="eyebrow">🌍 Smart Remote Life · Auswandern</span>
+  <h1>Auswandern nach Kontinent</h1>
+  <p>Nicht einfach irgendein Traumland auswählen: Wir vergleichen mögliche Ziele nach denselben 12 Kriterien – von Sicherheit und Langzeitmiete über Remote Work und Medizin bis Meer, Klima, Alltag und Leben mit Kind.</p>
+</header>
+
+<main class="layout">
+  <aside class="ad-rail ad-left" aria-label="Werbung: Staatenlos"><div class="ad-wrap"><span class="ad-mark">Werbung</span><a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener"><img src="affiliate-staatenlos-auswanderlexikon.png" alt="Werbebanner für das Auswander-Lexikon von Staatenlos"></a></div></aside>
+
+  <div class="content">
+    <section class="intro">
+      <h2>7 Regionen · ein einheitlicher Auswander-Check</h2>
+      <p>Europa und Afrika sind bereits fertig. Die nächsten Regionen folgen Schritt für Schritt im selben Aufbau, damit du später direkt vergleichen kannst, welches Ziel wirklich zu deinem Leben passt.</p>
+      <div class="criteria"><span>Sicherheit</span><span>Medizin</span><span>Kosten & Miete</span><span>Remote Work</span><span>Meer & Baden</span><span>Klima</span><span>Kind & Alltag</span><span>Freiheit</span></div>
+    </section>
+
+    <div class="leaderboard"><span class="ad-mark">Werbung</span><a href="https://bohle-digital.de/freelancer-toolkit/?aff=tiramcreations" target="_blank" rel="sponsored noopener"><img src="affiliate-freelancer-toolkit.png" alt="Werbebanner für das Freelancer Toolkit"></a></div>
+
+    <section class="cards" aria-label="Auswander-Blogs nach Kontinent">
+      <article class="continent">
+        <div class="continent-media"><img src="auswandern-europa-hero.png" alt="Europäische Küstenlandschaft mit Bergen und Ort am Meer"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern in Europa: 6 Länder</h2><p>Montenegro, Albanien, Portugal, Kroatien, Bulgarien und Nordmazedonien im großen 12-Punkte-Check.</p></div></div>
+        <div class="continent-actions"><a class="read-link" href="auswandern-europa.html">Europa-Check öffnen →</a><span class="badge">Fertig</span></div>
+      </article>
+
+      <article class="continent">
+        <div class="continent-media"><img src="auswandern-afrika-hero.png" alt="Tropische Küste mit Palmen, türkisfarbenem Meer und Bergen"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern nach Afrika: 7 Länder</h2><p>Mauritius, Seychellen, Sansibar, Kap Verde, Kenia, Madagaskar und Kamerun – mit neuem Mietrahmen von etwa 300–600 €.</p></div></div>
+        <div class="continent-actions"><a class="read-link" href="auswandern-afrika.html">Afrika-Check öffnen →</a><span class="badge">Fertig</span></div>
+      </article>
+
+      <article class="continent placeholder">
+        <div class="continent-media"><div class="continent-copy"><h2>Auswandern nach Asien</h2><p>Unsere nächsten Länderchecks zu Bali, Malediven, Sri Lanka, Malaysia und weiteren Favoriten.</p></div></div>
+        <div class="continent-actions"><span class="read-link" aria-disabled="true">Artikel folgt</span><span class="badge soon">BALD</span></div>
+      </article>
+
+      <article class="continent placeholder">
+        <div class="continent-media"><div class="continent-copy"><h2>Mittelamerika & Karibik</h2><p>Mexiko, Costa Rica, Panama, Dominikanische Republik und weitere Ziele im gleichen Prüf-System.</p></div></div>
+        <div class="continent-actions"><span class="read-link" aria-disabled="true">Artikel folgt</span><span class="badge soon">BALD</span></div>
+      </article>
+
+      <div class="feature-ad"><span class="ad-mark">Werbung</span><a href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener"><img src="affiliate-staatenlos-feature-1080.jpg" alt="Staatenlos Auswander-Lexikon – Werbebild"></a></div>
+
+      <article class="continent placeholder">
+        <div class="continent-media"><div class="continent-copy"><h2>Auswandern nach Südamerika</h2><p>Ecuador, Galápagos, Paraguay und weitere Länder – mit Fokus auf Kosten, Sicherheit, Alltag und Remote Work.</p></div></div>
+        <div class="continent-actions"><span class="read-link" aria-disabled="true">Artikel folgt</span><span class="badge soon">BALD</span></div>
+      </article>
+
+      <article class="continent placeholder">
+        <div class="continent-media"><div class="continent-copy"><h2>Südpazifik & Ozeanien</h2><p>Fidschi, Cook Islands / Aitutaki, Bora Bora und weitere Traumziele – später im gleichen Vergleich.</p></div></div>
+        <div class="continent-actions"><span class="read-link" aria-disabled="true">Artikel folgt</span><span class="badge soon">BALD</span></div>
+      </article>
+
+      <article class="continent placeholder">
+        <div class="continent-media"><div class="continent-copy"><h2>Naher Osten</h2><p>Oman und die Vereinigten Arabischen Emirate / Dubai – mit Blick auf Freiheit, Kosten, Sicherheit, Klima und Alltag.</p></div></div>
+        <div class="continent-actions"><span class="read-link" aria-disabled="true">Artikel folgt</span><span class="badge soon">BALD</span></div>
+      </article>
+    </section>
+
+    <div class="mobile-ad"><span class="ad-mark">Werbung</span><a href="https://www.discovercars.com/?a_aid=Smart-Remote-Life" target="_blank" rel="sponsored noopener"><img src="affiliate-discovercars-testreise.png" alt="Werbebanner für DiscoverCars – Mobil auf Testreise"></a></div>
+  </div>
+
+  <aside class="ad-rail ad-right" aria-label="Werbung: DiscoverCars"><div class="ad-wrap"><span class="ad-mark">Werbung</span><a class="ad-link" href="https://www.discovercars.com/?a_aid=Smart-Remote-Life" target="_blank" rel="sponsored noopener"><img src="affiliate-discovercars-testreise.png" alt="Werbebanner für DiscoverCars – Mobil auf Testreise"></a></div></aside>
+</main>
+
+<footer class="footer-note"><a href="index.html">Startseite</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="disclaimer.html">Disclaimer</a><div style="margin-top:10px">© Smart Remote Life</div></footer>
+</body>
+</html>
