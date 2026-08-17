@@ -123,11 +123,10 @@
 }
 
 
-/* Europa v5 – Mobile- und Performance-Finalisierung */
-html,body{max-width:100%;overflow-x:clip}
+/* Europa v6 – Mobile-Finalisierung: echte Handybreite + kompakte Tabelle */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
 .layout{grid-template-columns:minmax(0,1fr)}
-.article,.intro-panel,.method-panel,.overview-panel,.eu-panel,.five-panel,.self-section,.self-copy,.sources,.faq,.disclaimer,.country-block{min-width:0;max-width:100%}
-.overview-table{max-width:100%;-webkit-overflow-scrolling:touch}
+.article,.intro-panel,.method-panel,.overview-panel,.eu-panel,.five-panel,.self-section,.self-copy,.sources,.faq,.disclaimer,.country-block,.related-link-panel{min-width:0;max-width:100%}
 .country-sources a,.sources a{overflow-wrap:anywhere;word-break:break-word}
 .related-link-panel{padding:28px;background:linear-gradient(145deg,#eaf7fb,#fff);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
 .related-link-panel h2{margin-bottom:10px}
@@ -139,90 +138,107 @@ html,body{max-width:100%;overflow-x:clip}
   .layout{width:calc(100% - 28px);grid-template-columns:minmax(0,1fr)}
   .article{width:100%;min-width:0}
   .intro-panel,.method-panel,.overview-panel,.eu-panel,.five-panel,.self-copy,.sources,.faq,.disclaimer,.related-link-panel{width:100%;min-width:0}
-  .overview-table{width:100%;max-width:100%;overflow-x:auto}
   .country-block{width:100%;min-width:0}
 }
 
 @media(max-width:680px){
-  body{font-size:16px;line-height:1.62}
+  *{min-width:0}
+  body{font-size:15px;line-height:1.58}
+  .home-button{top:12px;left:12px;width:42px;height:42px;border-radius:10px}
   .hero{
     min-height:600px;
+    width:100%;
+    max-width:100%;
     background-image:linear-gradient(180deg,rgba(3,17,31,.86) 0%,rgba(3,17,31,.68) 50%,rgba(3,17,31,.40) 100%),url("security-europa-header-mobile-900.webp");
     background-size:cover;
     background-position:center;
   }
-  .hero-inner{width:calc(100% - 28px);padding:86px 0 46px}
+  .hero-inner{width:calc(100% - 28px);max-width:100%;padding:86px 0 46px}
   .hero-copy{width:100%;max-width:none}
-  .hero h1{font-size:clamp(2.3rem,11vw,2.85rem);line-height:1.04;overflow-wrap:anywhere}
-  .hero p{max-width:none;font-size:1rem}
+  .hero h1{font-size:clamp(2.18rem,10.4vw,2.75rem);line-height:1.04;overflow-wrap:anywhere}
+  .hero p{max-width:none;font-size:.97rem}
   .hero-meta{grid-template-columns:1fr 1fr;gap:8px;width:100%}
-  .hero-meta span{min-width:0;padding:8px;font-size:.72rem;line-height:1.35}
-  .quick-inner{width:calc(100% - 24px);padding:18px 0 22px}
+  .hero-meta span{min-width:0;padding:8px 6px;font-size:.70rem;line-height:1.3;text-align:center}
+  .quick-nav{width:100%;max-width:100%;overflow:hidden}
+  .quick-inner{width:calc(100% - 24px);max-width:100%;padding:18px 0 22px}
   .quick-grid{grid-template-columns:1fr 1fr;gap:8px}
-  .quick-grid a{min-width:0;min-height:50px;padding:9px 8px;font-size:.78rem;line-height:1.3}
-  .layout{width:calc(100% - 24px);margin:0 12px;grid-template-columns:minmax(0,1fr);overflow:visible}
-  .article{width:100%;min-width:0;padding:30px 0 66px}
-  section{scroll-margin-top:74px}
-  section+section{margin-top:38px}
-  .intro-panel,.method-panel,.overview-panel,.eu-panel,.five-panel,.self-copy,.sources,.faq,.disclaimer,.related-link-panel{padding:20px 18px;border-radius:12px}
-  h2{font-size:clamp(1.55rem,7vw,2rem);line-height:1.14}
-  h3{font-size:1.05rem}
-  .lead{font-size:1rem;line-height:1.62}
-  .note{padding:14px 14px;margin-top:16px}
-  .eu-panel{grid-template-columns:minmax(0,1fr);gap:14px}
-  .eu-panel .box{min-width:0;padding:17px}
-  .method-grid{grid-template-columns:minmax(0,1fr);gap:10px}
-  .method-step{min-height:0;padding:17px}
+  .quick-grid a{min-width:0;min-height:48px;padding:8px 6px;font-size:.76rem;line-height:1.25}
+  .layout{width:calc(100% - 20px);max-width:100%;margin:0 10px;grid-template-columns:minmax(0,1fr);overflow:hidden}
+  .article{width:100%;max-width:100%;min-width:0;padding:28px 0 62px;overflow:hidden}
+  section{scroll-margin-top:72px;max-width:100%}
+  section+section{margin-top:36px}
+  .intro-panel,.method-panel,.overview-panel,.eu-panel,.five-panel,.self-copy,.sources,.faq,.disclaimer,.related-link-panel{width:100%;max-width:100%;padding:18px 15px;border-radius:12px;overflow:hidden}
+  h2{font-size:clamp(1.42rem,6.7vw,1.85rem);line-height:1.13;overflow-wrap:anywhere}
+  h3{font-size:1rem;overflow-wrap:anywhere}
+  p,.lead{max-width:100%;overflow-wrap:anywhere}
+  .lead{font-size:.97rem;line-height:1.58}
+  .note{padding:13px 12px;margin-top:15px;overflow-wrap:anywhere}
+  .eu-panel{grid-template-columns:minmax(0,1fr);gap:12px}
+  .eu-panel .box{min-width:0;max-width:100%;padding:15px;overflow:hidden}
+  .method-grid{grid-template-columns:minmax(0,1fr);gap:9px}
+  .method-step{min-height:0;padding:15px;max-width:100%}
 
-  /* Schnellvergleich wird auf Mobil zu echten Karten – kein horizontales Wischen nötig. */
-  .overview-table{overflow:visible;border:0;background:transparent;box-shadow:none}
-  .overview-table table{display:block;width:100%;min-width:0;border-collapse:separate}
-  .overview-table thead{display:none}
-  .overview-table tbody{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;width:100%}
-  .overview-table tr{display:block;width:100%;min-width:0;background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden}
-  .overview-table td{display:grid;grid-template-columns:minmax(92px,32%) minmax(0,1fr);gap:10px;width:100%;min-width:0;padding:10px 12px;border-bottom:1px solid #e7eef1;font-size:.84rem;overflow-wrap:anywhere}
-  .overview-table td:last-child{border-bottom:0}
-  .overview-table td::before{font-size:.67rem;font-weight:950;letter-spacing:.04em;text-transform:uppercase;color:#61798a}
-  .overview-table td:nth-child(1)::before{content:"Land"}
-  .overview-table td:nth-child(2)::before{content:"Bewertung"}
-  .overview-table td:nth-child(3)::before{content:"Prüfpunkt"}
-  .overview-table td:nth-child(4)::before{content:"Warum"}
-  .table-status{align-items:flex-start;line-height:1.35}
-  .table-status span{flex:0 0 11px;margin-top:2px}
+  /* Schnellvergleich bleibt eine echte Tabelle, passt aber vollständig aufs Display. */
+  .overview-panel{padding-left:10px;padding-right:10px}
+  .overview-table{width:100%;max-width:100%;overflow:hidden;border:1px solid var(--line);border-radius:9px;background:#fff;margin-top:16px}
+  .overview-table table{display:table;width:100%!important;max-width:100%!important;min-width:0!important;table-layout:fixed;border-collapse:collapse}
+  .overview-table thead{display:table-header-group}
+  .overview-table tbody{display:table-row-group}
+  .overview-table tr{display:table-row;width:auto;background:transparent;border:0}
+  .overview-table th,.overview-table td{display:table-cell;min-width:0!important;max-width:none;padding:6px 3px;border-bottom:1px solid #e7eef1;vertical-align:top;white-space:normal;overflow-wrap:anywhere;word-break:normal;hyphens:auto;line-height:1.2}
+  .overview-table th{font-size:.52rem;letter-spacing:0;text-align:left}
+  .overview-table td{font-size:.56rem}
+  .overview-table th:nth-child(1),.overview-table td:nth-child(1){width:20%}
+  .overview-table th:nth-child(2),.overview-table td:nth-child(2){width:20%}
+  .overview-table th:nth-child(3),.overview-table td:nth-child(3){width:24%}
+  .overview-table th:nth-child(4),.overview-table td:nth-child(4){width:36%}
+  .overview-table td::before{content:none!important;display:none!important}
+  .flag-small{font-size:.85rem;margin-right:2px}
+  .table-status{display:flex;gap:3px;align-items:flex-start;font-size:.54rem;line-height:1.15;font-weight:800}
+  .table-status span{flex:0 0 6px;width:6px;height:6px;margin-top:2px}
 
-  .group-title{margin-top:50px}
-  .country-head{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:17px}
-  .country-head>div:first-child{min-width:0}
-  .country-head h2{font-size:1.65rem;line-height:1.1;overflow-wrap:anywhere}
-  .score-badge{width:100%;min-width:0}
-  .country-intro{padding:18px 17px 3px;font-size:.98rem}
-  .country-facts{grid-template-columns:minmax(0,1fr);gap:9px;padding:12px 17px 6px}
-  .country-fact{min-width:0;min-height:0;padding:13px}
-  .evidence-grid{grid-template-columns:minmax(0,1fr);gap:10px;padding:10px 17px 6px}
-  .evidence{min-width:0;padding:15px}
-  .verdict{margin:7px 17px 12px;padding:14px}
-  .country-sources{display:grid;grid-template-columns:minmax(0,1fr);gap:7px;padding:0 17px 19px}
+  .group-title{margin-top:46px}
+  .country-head{display:grid;grid-template-columns:minmax(0,1fr);gap:11px;padding:15px}
+  .country-head>div:first-child{min-width:0;max-width:100%}
+  .country-head h2{font-size:1.5rem;line-height:1.08;overflow-wrap:anywhere}
+  .score-badge{width:100%;min-width:0;max-width:100%}
+  .country-intro{padding:16px 15px 3px;font-size:.95rem;overflow-wrap:anywhere}
+  .country-facts{grid-template-columns:minmax(0,1fr);gap:8px;padding:10px 15px 5px}
+  .country-fact{min-width:0;min-height:0;padding:12px;overflow-wrap:anywhere}
+  .evidence-grid{grid-template-columns:minmax(0,1fr);gap:9px;padding:9px 15px 5px}
+  .evidence{min-width:0;padding:13px;overflow-wrap:anywhere}
+  .verdict{margin:7px 15px 11px;padding:12px;overflow-wrap:anywhere}
+  .country-sources{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:0 15px 17px;max-width:100%}
   .country-sources b{margin:0 0 1px}
-  .country-sources a{display:block;width:100%;min-height:44px;padding:10px 11px;line-height:1.35}
+  .country-sources a{display:block;width:100%;max-width:100%;min-height:42px;padding:9px 10px;line-height:1.3;overflow-wrap:anywhere}
 
-  .five-panel{grid-template-columns:minmax(0,1fr);gap:20px}
+  .five-panel{grid-template-columns:minmax(0,1fr);gap:18px}
   .five-members{grid-template-columns:1fr 1fr;gap:7px}
-  .self-section{grid-template-columns:minmax(0,1fr);gap:14px}
-  .self-image{min-height:0;aspect-ratio:16/9;width:100%}
+  .self-section{grid-template-columns:minmax(0,1fr);gap:13px;max-width:100%;overflow:hidden}
+  .self-image{min-height:0;aspect-ratio:16/9;width:100%;max-width:100%}
   .self-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .protect-list li{font-size:.88rem;line-height:1.48}
-  .sources details{width:100%;min-width:0}
-  .sources summary{padding:13px 12px}
-  .sources ul{padding:0 12px 14px 28px}
-  .sources li{font-size:.84rem;overflow-wrap:anywhere}
-  .inline-ad-wrap{margin:30px 0 58px}
-  .inline-ad-extra-cta{min-height:44px;padding:10px 0 0}
-  .footer{padding-left:14px;padding-right:14px}
+  .protect-list li{font-size:.86rem;line-height:1.45}
+  .sources details{width:100%;min-width:0;max-width:100%}
+  .sources summary{padding:12px 11px;overflow-wrap:anywhere}
+  .sources ul{padding:0 10px 13px 25px}
+  .sources li{font-size:.82rem;overflow-wrap:anywhere}
+
+  /* Werbung auf dem Handy bewusst kleiner als der Textbereich. */
+  .affiliate-mobile{display:block;width:min(290px,82vw);margin:26px auto 0}
+  .affiliate-mobile img{width:100%;height:auto}
+  .inline-ad-wrap{width:min(300px,84vw);max-width:100%;margin:28px auto 52px;text-align:center}
+  .inline-ad{width:100%;margin-top:0}
+  .inline-ad img{width:100%;height:auto}
+  .inline-ad-extra-cta{min-height:42px;padding:9px 0 0;font-size:.76rem}
+  .footer{padding-left:12px;padding-right:12px}
+  .footer a{display:inline-block;margin:3px 5px}
 }
 
 @media(max-width:370px){
   .hero-meta,.quick-grid,.five-members{grid-template-columns:1fr}
-  .overview-table td{grid-template-columns:1fr;gap:3px}
+  .overview-table th{font-size:.48rem;padding:5px 2px}
+  .overview-table td{font-size:.51rem;padding:5px 2px}
+  .table-status{font-size:.49rem}
   .home-button{top:10px;left:10px}
 }
 
