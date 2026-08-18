@@ -471,10 +471,63 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
         rgba(255,255,255,.14) 100%)!important;
   }
 }
+
+/* SRL MAIN PAGES · HOME BUTTON STANDARD · SECURITY REFERENCE */
+.home-button{
+  position:fixed;
+  top:18px;
+  left:20px;
+  z-index:70;
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 10px 30px rgba(4,25,42,.18);
+  border-radius:12px;
+  color:#0b3552;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  transition:transform .18s ease,box-shadow .18s ease;
+  text-decoration:none;
+}
+.home-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(4,25,42,.24);
+}
+.home-button:focus-visible{
+  outline:3px solid #d9aa45;
+  outline-offset:3px;
+}
+.home-button svg{
+  width:22px;
+  height:22px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+@media(max-width:720px){
+  .home-button{
+    top:12px;
+    left:12px;
+    width:42px;
+    height:42px;
+    border-radius:10px;
+  }
+}
 </style>
 </head>
 <body>
-<div class="topbar"><a class="home-btn" href="index.html" aria-label="Zur Startseite">⌂</a></div>
+<a class="home-button" href="index.html" aria-label="Zur Smart Remote Life Startseite">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3.5 10.5 12 3l8.5 7.5"></path>
+    <path d="M5.5 9.5V21h13V9.5"></path>
+    <path d="M9.5 21v-6h5v6"></path>
+  </svg>
+</a>
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-copy-panel">
