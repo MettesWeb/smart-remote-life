@@ -830,7 +830,29 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .rotate-notice-close:hover,.rotate-notice-close:focus-visible{background:rgba(255,255,255,.10);color:#fff;outline:none}
 }
 
-  </style>
+  
+/* SECURITY DESKTOP SIDEBAR BANNER FIX · 18.08.2026
+   Nur Wiederherstellung der bereits vorhandenen Desktop-Werbespalte.
+   Keine Änderungen an Inhalt, SEO, Meta, Schema, Links oder Mobile. */
+@media (min-width:1500px){
+  .layout{
+    grid-template-columns:190px minmax(0,1160px) 1fr;
+    justify-content:center;
+  }
+  .article{
+    grid-column:2;
+    width:100%;
+  }
+  .side-ad{
+    display:block;
+    grid-column:1;
+    position:sticky;
+    top:22px;
+    margin-top:56px;
+    align-self:start;
+  }
+}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
