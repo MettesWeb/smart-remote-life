@@ -131,6 +131,105 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
 .mobile-ad{display:none}
 @media(max-width:1279px){.layout{width:min(980px,calc(100% - 32px));grid-template-columns:1fr}.ad-rail{display:none}.mobile-ad{display:block;margin:18px auto 28px;text-align:center}.mobile-ad img{width:min(240px,75vw);height:auto}}
 @media(max-width:720px){.hero{min-height:390px;background-position:center center}.hero-inner{min-height:390px;padding:30px 22px}.continent-media{height:310px}.continent-media::after{background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.82) 57%,rgba(255,255,255,.13))}.continent-copy{left:22px;right:22px;top:28px;transform:none;max-width:none}.continent-actions{align-items:flex-start;flex-direction:column}.placeholder .continent-media{height:190px}.placeholder .continent-copy{max-width:none}.intro{padding:22px}}
+
+/* AUSWANDERN HAUPTSEITE · VISUAL UPDATE 18.08.2026
+   Bewusst nur Header + Regionskarten. SEO/Schema/Affiliate unverändert. */
+
+/* Full-width Hero nach dem Prinzip der Security-Hauptseite */
+.topbar{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  z-index:20;
+  padding-top:18px;
+  pointer-events:none;
+}
+.topbar .home-btn{pointer-events:auto}
+.hero{
+  width:100%;
+  min-height:680px;
+  margin:0 0 34px;
+  border-radius:0;
+  border:0;
+  box-shadow:none;
+  background-position:center 52%;
+}
+.hero-inner{
+  width:min(1180px,calc(100% - 42px));
+  min-height:680px;
+  padding:72px 54px;
+}
+
+/* Regionen: Bild ist jetzt die Navigation */
+.continent{overflow:hidden}
+.continent-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+}
+.continent-link:focus-visible{
+  outline:4px solid var(--gold);
+  outline-offset:-4px;
+}
+.continent-link .continent-media{
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.continent-link:hover .continent-media{transform:scale(1.006)}
+.continent-link:hover .image-cta{transform:translateY(-2px);background:#e4f6ff}
+.continent-copy p strong{
+  color:#2f5f79;
+  font-weight:950;
+  letter-spacing:.005em;
+}
+.image-cta{
+  display:inline-flex;
+  align-items:center;
+  margin-top:16px;
+  padding:9px 13px;
+  border-radius:999px;
+  background:rgba(238,249,255,.94);
+  border:1px solid rgba(49,95,121,.12);
+  color:#315f79;
+  font-size:.76rem;
+  font-weight:950;
+  box-shadow:0 8px 20px rgba(33,75,96,.08);
+  transition:.18s ease;
+}
+.security-card .continent-media{
+  background:#06182b;
+}
+.security-card .continent-media::after{
+  background:linear-gradient(90deg,rgba(4,23,41,.93),rgba(4,23,41,.74) 48%,rgba(4,23,41,.16) 82%);
+}
+.security-card .continent-copy h2,
+.security-card .continent-copy p strong{color:#fff}
+.security-card .continent-copy p{color:#d8e9ef}
+.security-card .image-cta{
+  background:rgba(9,55,84,.90);
+  border-color:rgba(131,229,242,.28);
+  color:#e7fbff;
+}
+
+@media(max-width:720px){
+  .topbar{padding-top:12px}
+  .hero{
+    min-height:430px;
+    margin-bottom:28px;
+    border-radius:0;
+  }
+  .hero-inner{
+    width:min(100% - 28px,620px);
+    min-height:430px;
+    padding:64px 22px 30px;
+  }
+  .continent-link:hover .continent-media{transform:none}
+  .image-cta{margin-top:13px}
+  .security-card .continent-media::after{
+    background:linear-gradient(180deg,rgba(4,23,41,.92),rgba(4,23,41,.74) 58%,rgba(4,23,41,.22));
+  }
+}
 </style>
 </head>
 <body>
@@ -158,40 +257,103 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
 
     <section class="cards" aria-label="Auswander-Blogs nach Kontinent">
       <article class="continent">
-        <div class="continent-media"><img src="auswandern-europa-hero.png" alt="Europäische Küstenlandschaft mit Bergen und Ort am Meer"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern in Europa: 6 Länder</h2><p>Montenegro, Albanien, Portugal, Kroatien, Bulgarien und Nordmazedonien im großen 12-Punkte-Check.</p></div></div>
-        <div class="continent-actions"><a class="read-link" href="auswandern-europa.html">Europa-Check öffnen →</a><span class="badge">Fertig</span></div>
+        <a class="continent-link" href="auswandern-europa.html" aria-label="Auswander-Check Europa öffnen">
+          <div class="continent-media">
+            <img src="auswandern-europa-hero.png" alt="Europäische Küstenlandschaft mit Bergen und Ort am Meer">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Auswandern in Europa: 6 Länder</h2>
+              <p><strong>Montenegro · Albanien · Portugal · Kroatien · Bulgarien · Nordmazedonien</strong><br>Sechs europäische Ziele im großen 12-Punkte-Check.</p>
+              <span class="image-cta">Europa-Check öffnen →</span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <article class="continent">
-        <div class="continent-media"><img src="auswandern-afrika-hero.png" alt="Tropische Küste mit Palmen, türkisfarbenem Meer und Bergen"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern nach Afrika: 7 Länder</h2><p>Mauritius, Seychellen, Sansibar, Kap Verde, Kenia, Madagaskar und Kamerun – mit neuem Mietrahmen von etwa 300–600 €.</p></div></div>
-        <div class="continent-actions"><a class="read-link" href="auswandern-afrika.html">Afrika-Check öffnen →</a><span class="badge">Fertig</span></div>
+        <a class="continent-link" href="auswandern-afrika.html" aria-label="Auswander-Check Afrika öffnen">
+          <div class="continent-media">
+            <img src="auswandern-afrika-hero.png" alt="Tropische Küste mit Palmen, türkisfarbenem Meer und Bergen">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Auswandern nach Afrika: 7 Länder</h2>
+              <p><strong>Mauritius · Seychellen · Sansibar · Kap Verde · Kenia · Madagaskar · Kamerun</strong><br>Sieben afrikanische Ziele mit Fokus auf Alltag, Budget, Meer und Remote Work.</p>
+              <span class="image-cta">Afrika-Check öffnen →</span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <article class="continent">
-        <div class="continent-media"><img src="asien-hero.png" alt="Tropische Küstenlandschaft als KI-Stimmungsbild für den Asien-Auswandercheck"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern nach Asien: 4 Ziele</h2><p>Malediven, Sri Lanka, Langkawi / Malaysia und Bali / Indonesien im gleichen 12-Punkte-Check.</p></div></div>
-        <div class="continent-actions"><a class="read-link" href="auswandern-asien.html">Asien-Check öffnen →</a><span class="badge">Fertig</span></div>
+        <a class="continent-link" href="auswandern-asien.html" aria-label="Auswander-Check Asien öffnen">
+          <div class="continent-media">
+            <img src="asien-hero.png" alt="Tropische Küstenlandschaft als KI-Stimmungsbild für den Asien-Auswandercheck">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Auswandern nach Asien: 4 Ziele</h2>
+              <p><strong>Malediven · Sri Lanka · Langkawi / Malaysia · Bali / Indonesien</strong><br>Vier sehr unterschiedliche Möglichkeiten für Meer, Remote Work und längeres Leben.</p>
+              <span class="image-cta">Asien-Check öffnen →</span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <article class="continent">
-        <div class="continent-media"><img src="mittelamerika-karibik-hero.png" alt="Tropische Küste als KI-Stimmungsbild für Mittelamerika und die Karibik"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern nach Mittelamerika & Karibik: 4 Länder</h2><p>Costa Rica, Panama, Dominikanische Republik und Mexiko – mit Fokus auf Kosten, Sicherheit, Meer und Remote Work.</p></div></div>
-        <div class="continent-actions"><a class="read-link" href="auswandern-mittelamerika-karibik.html">Karibik-Check öffnen →</a><span class="badge">Fertig</span></div>
+        <a class="continent-link" href="auswandern-mittelamerika-karibik.html" aria-label="Auswander-Check Mittelamerika und Karibik öffnen">
+          <div class="continent-media">
+            <img src="mittelamerika-karibik-hero.png" alt="Tropische Küste als KI-Stimmungsbild für Mittelamerika und die Karibik">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Auswandern nach Mittelamerika & Karibik: 4 Länder</h2>
+              <p><strong>Costa Rica · Panama · Dominikanische Republik · Mexiko</strong><br>Vier Ziele mit Fokus auf Kosten, Sicherheit, Meer und Remote Work.</p>
+              <span class="image-cta">Karibik-Check öffnen →</span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <div class="feature-ad"><span class="ad-mark">Werbung</span><a href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener"><img src="affiliate-staatenlos-feature-1080.jpg" alt="Staatenlos Auswander-Lexikon – Werbebild"></a></div>
 
       <article class="continent">
-        <div class="continent-media"><img src="suedamerika-hero.png" alt="Südamerikanische Küsten- und Berglandschaft als KI-Stimmungsbild für den Südamerika-Auswandercheck"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern nach Südamerika: 6 Länder</h2><p>Ecuador / Galápagos, Paraguay, Uruguay, Argentinien, Brasilien und Kolumbien im großen Vergleich.</p></div></div>
-        <div class="continent-actions"><a class="read-link" href="auswandern-suedamerika.html">Südamerika-Check öffnen →</a><span class="badge">Fertig</span></div>
+        <a class="continent-link" href="auswandern-suedamerika.html" aria-label="Auswander-Check Südamerika öffnen">
+          <div class="continent-media">
+            <img src="suedamerika-hero.png" alt="Südamerikanische Küsten- und Berglandschaft als KI-Stimmungsbild für den Südamerika-Auswandercheck">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Auswandern nach Südamerika: 6 Länder</h2>
+              <p><strong>Ecuador / Galápagos · Paraguay · Uruguay · Argentinien · Brasilien · Kolumbien</strong><br>Sechs Länder zwischen Küste, Natur, günstigerem Alltag und digitaler Infrastruktur.</p>
+              <span class="image-cta">Südamerika-Check öffnen →</span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <article class="continent">
-        <div class="continent-media"><img src="suedpazifik-ozeanien-hero.png" alt="Tropische Inselwelt als KI-Stimmungsbild für Südpazifik und Ozeanien"><span class="ai">KI</span><div class="continent-copy"><h2>Auswandern: Südpazifik & Ozeanien – 6 Ziele</h2><p>Fidschi, Cookinseln / Aitutaki, Französisch-Polynesien / Bora Bora, Samoa, Tonga und Vanuatu im 12-Punkte-Check.</p></div></div>
-        <div class="continent-actions"><a class="read-link" href="auswandern-suedpazifik-ozeanien.html">Südpazifik-Check öffnen →</a><span class="badge">Fertig</span></div>
+        <a class="continent-link" href="auswandern-suedpazifik-ozeanien.html" aria-label="Auswander-Check Südpazifik und Ozeanien öffnen">
+          <div class="continent-media">
+            <img src="suedpazifik-ozeanien-hero.png" alt="Tropische Inselwelt als KI-Stimmungsbild für Südpazifik und Ozeanien">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Auswandern: Südpazifik & Ozeanien – 6 Ziele</h2>
+              <p><strong>Fidschi · Cookinseln / Aitutaki · Französisch-Polynesien / Bora Bora · Samoa · Tonga · Vanuatu</strong><br>Sechs Inselwelten zwischen Lagunen-Traum, Slow Life, Entfernung und höheren Importkosten.</p>
+              <span class="image-cta">Südpazifik-Check öffnen →</span>
+            </div>
+          </div>
+        </a>
       </article>
 
-      <article class="continent placeholder">
-        <div class="continent-media"><div class="continent-copy"><h2>Weitere Länder folgen</h2><p>Neue Länderchecks und Regionen ergänzen wir Schritt für Schritt.</p></div></div>
-        <div class="continent-actions"><span class="read-link" aria-disabled="true">Weitere Artikel folgen</span><span class="badge soon">BALD</span></div>
+      <article class="continent security-card">
+        <a class="continent-link" href="digitale-freiheit-weltweit.html" aria-label="Digitale Freiheit weltweit öffnen">
+          <div class="continent-media">
+            <img src="security-hero-cyber.png" alt="Dunkelblaues digitales Sicherheitsmotiv für die Smart Remote Life Security-Länderchecks">
+            <span class="ai">KI</span>
+            <div class="continent-copy">
+              <h2>Digitale Freiheit weltweit</h2>
+              <p><strong>Datenschutz · Überwachung · Internetfreiheit</strong><br>Entdecke unsere Security-Länderchecks für sechs Weltregionen.</p>
+              <span class="image-cta">Zu den Security-Checks →</span>
+            </div>
+          </div>
+        </a>
       </article>
     </section>
 
