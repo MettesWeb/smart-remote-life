@@ -1,35 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Remote Life | Remote Jobs, Auswandern, digitale Freiheit & Creator Setup</title>
-  <meta name="description" content="Smart Remote Life: Guides zu Remote Jobs, Auswandern, digitaler Freiheit und Creator Setup – für ortsunabhängiges Arbeiten, Reisen und ein freieres digitales Leben." />
-  <meta name="author" content="Marit Silva Gebhardt" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta name="theme-color" content="#fffdfb" />
-
-  <link rel="canonical" href="https://smart-remote-life.com/" />
-  <link rel="alternate" hreflang="de" href="https://smart-remote-life.com/" />
-  <link rel="alternate" hreflang="x-default" href="https://smart-remote-life.com/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="de_DE" />
-  <meta property="og:site_name" content="Smart Remote Life" />
-  <meta property="og:title" content="Smart Remote Life | Remote Jobs, Auswandern & digitale Freiheit" />
-  <meta property="og:description" content="Remote Jobs, Auswandern, digitale Freiheit und Creator Setup – praktische Guides für ein freieres digitales Leben." />
-  <meta property="og:url" content="https://smart-remote-life.com/" />
-  <meta property="og:image" content="https://smart-remote-life.com/smart-remote-life-bg-beach.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Tropische Küstenlandschaft als Stimmungsbild für Smart Remote Life" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Smart Remote Life | Remote Jobs, Auswandern & digitale Freiheit" />
-  <meta name="twitter:description" content="Remote Jobs, Auswandern, digitale Freiheit und Creator Setup für ein freieres digitales Leben." />
-  <meta name="twitter:image" content="https://smart-remote-life.com/smart-remote-life-bg-beach.png" />
-
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Remote Life | Remote Jobs, Auswandern, digitale Freiheit &amp; Creator Setup</title>
+<meta content="Smart Remote Life: Guides zu Remote Jobs, Auswandern, digitaler Freiheit und Creator Setup – für ortsunabhängiges Arbeiten, Reisen und ein freieres digitales Leben." name="description"/>
+<meta content="Marit Silva Gebhardt" name="author"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="#fffdfb" name="theme-color"/>
+<link href="https://smart-remote-life.com/" rel="canonical"/>
+<link href="https://smart-remote-life.com/" hreflang="de" rel="alternate"/>
+<link href="https://smart-remote-life.com/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="Smart Remote Life" property="og:site_name"/>
+<meta content="Smart Remote Life | Remote Jobs, Auswandern &amp; digitale Freiheit" property="og:title"/>
+<meta content="Remote Jobs, Auswandern, digitale Freiheit und Creator Setup – praktische Guides für ein freieres digitales Leben." property="og:description"/>
+<meta content="https://smart-remote-life.com/" property="og:url"/>
+<meta content="https://smart-remote-life.com/smart-remote-life-bg-beach.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="Tropische Küstenlandschaft als Stimmungsbild für Smart Remote Life" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Smart Remote Life | Remote Jobs, Auswandern &amp; digitale Freiheit" name="twitter:title"/>
+<meta content="Remote Jobs, Auswandern, digitale Freiheit und Creator Setup für ein freieres digitales Leben." name="twitter:description"/>
+<meta content="https://smart-remote-life.com/smart-remote-life-bg-beach.png" name="twitter:image"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -43,7 +39,7 @@
   }
 }
   </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -94,7 +90,7 @@
   }
 }
   </script>
-  <style>
+<style>
     :root {
       --ink: #102033;
       --muted: #6b7280;
@@ -721,143 +717,227 @@
     url("tech-header-real.png")!important;
   background-position:center 34%!important;
 }
+
+
+/* INDEX FINAL OVERRIDES · requested polishing */
+body::before{
+  content:none !important;
+  display:none !important;
+}
+
+/* Highlights im Blog: thumbnails right-aligned so the subject remains visible */
+.article-link img{
+  object-position:right center !important;
+}
+
+/* Main header: non-transparent background image, mirrored, palms on the right,
+   with a slightly transparent text panel but fully opaque text */
+.hero{
+  background:none !important;
+}
+.hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    url("smart-remote-life-bg-beach.png") center center / cover no-repeat !important;
+  transform:scaleX(-1);
+  transform-origin:center;
+  z-index:0 !important;
+  opacity:1 !important;
+}
+.hero::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.48) 0%,
+      rgba(255,255,255,.18) 38%,
+      rgba(255,255,255,.04) 64%,
+      rgba(255,255,255,0) 100%) !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.hero-inner{
+  position:relative !important;
+  z-index:2 !important;
+}
+.hero-brand-panel{
+  background:rgba(255,255,255,.70) !important;
+  border:1px solid rgba(255,255,255,.86) !important;
+  box-shadow:0 22px 58px rgba(44,76,95,.14) !important;
+}
+@media(max-width:720px){
+  .hero::after{
+    background:
+      linear-gradient(180deg,
+        rgba(255,255,255,.52) 0%,
+        rgba(255,255,255,.18) 44%,
+        rgba(255,255,255,.03) 100%) !important;
+  }
+  .hero-brand-panel{
+    background:rgba(255,255,255,.76) !important;
+  }
+}
+
+/* Themenwelten: for the 6 non-blog areas use the newly provided landscape images */
+.thumb-reisen{
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,0)),
+    url("theme-reisen.png") !important;
+  background-position:center 50% !important;
+}
+.thumb-business{
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,0)),
+    url("theme-business.png") !important;
+  background-position:center 56% !important;
+}
+.thumb-kinder{
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),
+    url("theme-kinder.png") !important;
+  background-position:center 54% !important;
+}
+.thumb-gesundheit{
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),
+    url("theme-gesundheit.png") !important;
+  background-position:center 52% !important;
+}
+.thumb-mentoring{
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.10),rgba(255,255,255,0)),
+    url("theme-mentoring.png") !important;
+  background-position:center 54% !important;
+}
+.thumb-english{
+  background-image:
+    linear-gradient(90deg,rgba(255,255,255,.10),rgba(255,255,255,0)),
+    url("theme-english-articles.png") !important;
+  background-position:center 52% !important;
+}
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-  <main class="page" id="main-content">
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-brand-panel">
-          <div class="eyebrow">Smart Remote Life</div>
-          <h1>Remote leben. Freier entscheiden.</h1>
-          <p class="lead">Praktische Guides für Remote Jobs, Auswandern, digitale Freiheit und Creator Setup – damit aus einer Idee Schritt für Schritt ein Leben mit mehr Ortsfreiheit werden kann.</p>
-          <span class="hero-tagline">Remote arbeiten · reisen · einfacher leben</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-head">
-      <h2>Themenwelten</h2>
-      <div class="hint">Die Bereiche wachsen Schritt für Schritt.</div>
-    </div>
-
-    <section class="grid" aria-label="Blog Kategorien">
-      <a class="topic security-topic" href="digitale-freiheit-weltweit.html">
-        <span class="topic-thumb thumb-security" aria-hidden="true"></span>
-        <h3>Digitale Freiheit & Sicherheit</h3>
-        <p>Datenschutz, Überwachung und Internetfreiheit im internationalen Vergleich.</p>
-        <span class="count">6 Regionen</span>
-      </a>
-
-      <a class="topic blue" href="tiktok-instagram-setup.html">
-        <span class="topic-thumb thumb-creator" aria-hidden="true"></span>
-        <h3>Creator Setup & Technik</h3>
-        <p>Equipment für TikTok, Instagram, Reels, UGC und mobile Content-Produktion.</p>
-        <span class="count">1 Beitrag</span>
-      </a>
-
-      <a class="topic navy" href="remote-jobs-finden.html">
-        <span class="topic-thumb thumb-remote" aria-hidden="true"></span>
-        <h3>Remote Jobs</h3>
-        <p>Remote Arbeit finden, digitale Skills aufbauen und Bewerbungen besser vorbereiten.</p>
-        <span class="count">1 Beitrag</span>
-      </a>
-
-      <a class="topic coral" href="auswandern.html">
-        <span class="topic-thumb thumb-auswandern" aria-hidden="true"></span>
-        <h3>Auswandern</h3>
-        <p>Planung, Checklisten, Alltag im Ausland und Vorbereitung mit Kind.</p>
-        <span class="count">6 Regionen</span>
-      </a>
-
-      <a class="topic gold" href="#">
-        <span class="topic-thumb thumb-reisen" aria-hidden="true"></span>
-        <h3>Reisen</h3>
-        <p>Günstiger reisen, clever planen und passende Tools für unterwegs finden.</p>
-        <span class="count">0 Beiträge</span>
-      </a>
-
-      <a class="topic lavender" href="#">
-        <span class="topic-thumb thumb-business" aria-hidden="true"></span>
-        <h3>Business</h3>
-        <p>Online-Business, E-Mail-Marketing, Automatisierung und digitale Produkte.</p>
-        <span class="count">0 Beiträge</span>
-      </a>
-
-      <a class="topic pink" href="#">
-        <span class="topic-thumb thumb-kinder" aria-hidden="true"></span>
-        <h3>Kinder</h3>
-        <p>Familienalltag, Lernen, Organisation, Kinderthemen und hilfreiche Produkte.</p>
-        <span class="count">0 Beiträge</span>
-      </a>
-
-      <a class="topic green" href="#">
-        <span class="topic-thumb thumb-gesundheit" aria-hidden="true"></span>
-        <h3>Gesundheit</h3>
-        <p>Sanfte Gesundheitsthemen, Routinen, Wohlbefinden und natürliche Inspiration.</p>
-        <span class="count">0 Beiträge</span>
-      </a>
-
-
-      <a class="topic mint" href="1-1-gespraech.html">
-        <span class="topic-thumb thumb-mentoring" aria-hidden="true"></span>
-        <h3>1:1 Gespräch</h3>
-        <p>Persönliche Orientierung zu Remote Job, Auswandern, Business, Content, Pinterest und digitalen Tools.</p>
-        <span class="count">Gespräch anfragen</span>
-      </a>
-
-      <a class="topic aqua" href="english-articles.html">
-        <span class="topic-thumb thumb-english" aria-hidden="true"></span>
-        <h3>English Articles</h3>
-        <p>English guides about remote jobs, creator tools and digital work for an international audience.</p>
-        <span class="count">Bereich öffnen</span>
-      </a>
-    </section>
-
-    <section class="latest">
-      <h2>Highlights im Blog</h2>
-      <div class="latest-grid">
-        <a class="article-link" href="digitale-freiheit-weltweit.html">
-          <img src="security-hero-cyber.png" alt="Dunkelblaues digitales Sicherheitsmotiv für die Smart Remote Life Security-Länderchecks">
-          <div>
-            <strong>Digitale Freiheit weltweit</strong>
-            <span>Vergleiche Datenschutz, Überwachung und Internetfreiheit in sechs Weltregionen.</span>
-          </div>
-        </a>
-
-        <a class="article-link" href="auswandern.html">
-          <img src="auswandern-header-remote-asia.png" alt="Tropische Küstenlandschaft als Stimmungsbild für die Smart Remote Life Auswander-Länderchecks">
-          <div>
-            <strong>Auswandern nach Kontinent</strong>
-            <span>Sechs Regionen im einheitlichen 12-Punkte-Check für Alltag, Kosten, Meer und Remote Work.</span>
-          </div>
-        </a>
-
-        <a class="article-link" href="remote-jobs-finden.html">
-          <img src="remote-jobs-hero.png" alt="Remote arbeitende Person mit Laptop und Bergblick">
-          <div>
-            <strong>Remote Jobs finden</strong>
-            <span>Finde seriöse Plattformen, passende Jobarten und bessere Wege in die Remote-Jobsuche.</span>
-          </div>
-        </a>
-
-        <a class="article-link" href="tiktok-instagram-setup.html">
-          <img src="tech-header-real.png" alt="Creatorin mit Kamera und Ringlicht im Home-Studio">
-          <div>
-            <strong>Creator Setup & Technik</strong>
-            <span>Was du für TikTok, Instagram, Reels und UGC wirklich brauchst – ohne Technik-Overload.</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <footer>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <div style="margin-top:10px;">© Smart Remote Life</div>
-    </footer>
-  </main>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<main class="page" id="main-content">
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-brand-panel">
+<div class="eyebrow">Smart Remote Life</div>
+<h1>Remote leben. Freier entscheiden.</h1>
+<p class="lead">Praktische Guides für Remote Jobs, Auswandern, digitale Freiheit und Creator Setup – damit aus einer Idee Schritt für Schritt ein Leben mit mehr Ortsfreiheit werden kann.</p>
+<span class="hero-tagline">Remote arbeiten · reisen · einfacher leben</span>
+</div>
+</div>
+</section>
+<div class="section-head">
+<h2>Themenwelten</h2>
+<div class="hint">Die Bereiche wachsen Schritt für Schritt.</div>
+</div>
+<section aria-label="Blog Kategorien" class="grid">
+<a class="topic security-topic" href="digitale-freiheit-weltweit.html">
+<span aria-hidden="true" class="topic-thumb thumb-security"></span>
+<h3>Digitale Freiheit &amp; Sicherheit</h3>
+<p>Datenschutz, Überwachung und Internetfreiheit im internationalen Vergleich.</p>
+<span class="count">6 Regionen</span>
+</a>
+<a class="topic blue" href="tiktok-instagram-setup.html">
+<span aria-hidden="true" class="topic-thumb thumb-creator"></span>
+<h3>Creator Setup &amp; Technik</h3>
+<p>Equipment für TikTok, Instagram, Reels, UGC und mobile Content-Produktion.</p>
+<span class="count">1 Beitrag</span>
+</a>
+<a class="topic navy" href="remote-jobs-finden.html">
+<span aria-hidden="true" class="topic-thumb thumb-remote"></span>
+<h3>Remote Jobs</h3>
+<p>Remote Arbeit finden, digitale Skills aufbauen und Bewerbungen besser vorbereiten.</p>
+<span class="count">1 Beitrag</span>
+</a>
+<a class="topic coral" href="auswandern.html">
+<span aria-hidden="true" class="topic-thumb thumb-auswandern"></span>
+<h3>Auswandern</h3>
+<p>Planung, Checklisten, Alltag im Ausland und Vorbereitung mit Kind.</p>
+<span class="count">6 Regionen</span>
+</a>
+<a class="topic gold" href="#">
+<span aria-hidden="true" class="topic-thumb thumb-reisen"></span>
+<h3>Reisen</h3>
+<p>Günstiger reisen, clever planen und passende Tools für unterwegs finden.</p>
+<span class="count">0 Beiträge</span>
+</a>
+<a class="topic lavender" href="#">
+<span aria-hidden="true" class="topic-thumb thumb-business"></span>
+<h3>Business</h3>
+<p>Online-Business, E-Mail-Marketing, Automatisierung und digitale Produkte.</p>
+<span class="count">0 Beiträge</span>
+</a>
+<a class="topic pink" href="#">
+<span aria-hidden="true" class="topic-thumb thumb-kinder"></span>
+<h3>Kinder</h3>
+<p>Familienalltag, Lernen, Organisation, Kinderthemen und hilfreiche Produkte.</p>
+<span class="count">0 Beiträge</span>
+</a>
+<a class="topic green" href="#">
+<span aria-hidden="true" class="topic-thumb thumb-gesundheit"></span>
+<h3>Gesundheit</h3>
+<p>Sanfte Gesundheitsthemen, Routinen, Wohlbefinden und natürliche Inspiration.</p>
+<span class="count">0 Beiträge</span>
+</a>
+<a class="topic mint" href="1-1-gespraech.html">
+<span aria-hidden="true" class="topic-thumb thumb-mentoring"></span>
+<h3>1:1 Gespräch</h3>
+<p>Persönliche Orientierung zu Remote Job, Auswandern, Business, Content, Pinterest und digitalen Tools.</p>
+<span class="count">Gespräch anfragen</span>
+</a>
+<a class="topic aqua" href="english-articles.html">
+<span aria-hidden="true" class="topic-thumb thumb-english"></span>
+<h3>English Articles</h3>
+<p>English guides about remote jobs, creator tools and digital work for an international audience.</p>
+<span class="count">Bereich öffnen</span>
+</a>
+</section>
+<section class="latest">
+<h2>Highlights im Blog</h2>
+<div class="latest-grid">
+<a class="article-link" href="digitale-freiheit-weltweit.html">
+<img alt="Dunkelblaues digitales Sicherheitsmotiv für die Smart Remote Life Security-Länderchecks" src="security-hero-cyber.png"/>
+<div>
+<strong>Digitale Freiheit weltweit</strong>
+<span>Vergleiche Datenschutz, Überwachung und Internetfreiheit in sechs Weltregionen.</span>
+</div>
+</a>
+<a class="article-link" href="auswandern.html">
+<img alt="Tropische Küstenlandschaft als Stimmungsbild für die Smart Remote Life Auswander-Länderchecks" src="auswandern-header-remote-asia.png"/>
+<div>
+<strong>Auswandern nach Kontinent</strong>
+<span>Sechs Regionen im einheitlichen 12-Punkte-Check für Alltag, Kosten, Meer und Remote Work.</span>
+</div>
+</a>
+<a class="article-link" href="remote-jobs-finden.html">
+<img alt="Remote arbeitende Person mit Laptop und Bergblick" src="remote-jobs-hero.png"/>
+<div>
+<strong>Remote Jobs finden</strong>
+<span>Finde seriöse Plattformen, passende Jobarten und bessere Wege in die Remote-Jobsuche.</span>
+</div>
+</a>
+<a class="article-link" href="tiktok-instagram-setup.html">
+<img alt="Creatorin mit Kamera und Ringlicht im Home-Studio" src="tech-header-real.png"/>
+<div>
+<strong>Creator Setup &amp; Technik</strong>
+<span>Was du für TikTok, Instagram, Reels und UGC wirklich brauchst – ohne Technik-Overload.</span>
+</div>
+</a>
+</div>
+</section>
+<footer>
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="disclaimer.html">Disclaimer</a>
+<div style="margin-top:10px;">© Smart Remote Life</div>
+</footer>
+</main>
 </body>
 </html>
