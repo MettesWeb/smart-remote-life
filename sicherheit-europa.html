@@ -243,90 +243,125 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 }
 
 
+/* Europa v8 – finales echtes Responsive-System für Smartphones */
+@media (max-width:760px){
+  html,body{width:100%;max-width:100%;overflow-x:clip!important}
+  body{font-size:16px;line-height:1.62}
+  *{box-sizing:border-box}
 
+  .home-button{top:12px;left:12px;width:42px;height:42px;border-radius:10px}
 
-/* Security Europa – finaler Darstellungsstandard
-   Desktop/Inhalt bleibt unverändert. Der Header folgt der Lesebreite.
-   Auf Smartphones im Hochformat erscheint nur der Drehhinweis. */
-.hero-inner,
-.quick-inner{
-  width:min(1160px,calc(100% - 36px));
+  .hero,.quick-nav{width:100%;max-width:100%;overflow:hidden}
+  .hero{
+    min-height:570px;
+    background-image:linear-gradient(180deg,rgba(3,17,31,.88) 0%,rgba(3,17,31,.66) 48%,rgba(3,17,31,.38) 100%),url("security-europa-header-mobile-900.webp");
+    background-size:cover;
+    background-position:center;
+  }
+  .hero-inner{width:min(100% - 32px,620px);max-width:620px;margin:0 auto;padding:82px 0 42px}
+  .hero-copy{width:100%;max-width:none}
+  .hero-kicker{max-width:100%;font-size:.72rem;line-height:1.4;overflow-wrap:anywhere}
+  .hero h1{max-width:100%;font-size:clamp(2.15rem,10vw,2.8rem);line-height:1.04;letter-spacing:-.025em;overflow-wrap:anywhere}
+  .hero p{max-width:100%;font-size:.98rem;line-height:1.58}
+  .hero-meta{grid-template-columns:1fr 1fr;gap:8px;width:100%}
+  .hero-meta span{min-width:0;padding:8px 6px;font-size:.70rem;line-height:1.3;text-align:center;overflow-wrap:anywhere}
+
+  .quick-inner{width:min(100% - 32px,620px);max-width:620px;margin:0 auto;padding:18px 0 22px}
+  .quick-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .quick-grid a{min-width:0;min-height:48px;padding:9px 7px;font-size:.76rem;line-height:1.28;overflow-wrap:anywhere}
+
+  .layout{display:block;width:min(100% - 32px,620px);max-width:620px;margin:0 auto;padding:0;overflow:visible}
+  .article{width:100%;max-width:100%;min-width:0;margin:0;padding:30px 0 64px;overflow:visible}
+  .side-ad{display:none!important}
+  section{max-width:100%;scroll-margin-top:68px}
+  section+section{margin-top:36px}
+
+  .intro-panel,.method-panel,.overview-panel,.eu-panel,.five-panel,.self-copy,.sources,.faq,.disclaimer,.related-link-panel{
+    width:100%;max-width:100%;min-width:0;padding:19px 16px;border-radius:12px;overflow:hidden
+  }
+  h2{font-size:clamp(1.5rem,6.5vw,1.9rem);line-height:1.14;overflow-wrap:anywhere}
+  h3{font-size:1.04rem;line-height:1.25;overflow-wrap:anywhere}
+  p,.lead{max-width:100%;overflow-wrap:anywhere;word-break:normal}
+  .lead{font-size:.98rem;line-height:1.6}
+  .note{padding:13px 12px;margin-top:15px;overflow-wrap:anywhere}
+
+  .eu-panel,.method-grid,.five-panel,.self-section,.country-facts,.evidence-grid{grid-template-columns:minmax(0,1fr)}
+  .eu-panel{gap:12px}.eu-panel .box{min-width:0;max-width:100%;padding:15px;overflow:hidden}
+  .method-grid{gap:10px}.method-step{min-width:0;min-height:0;padding:15px}
+
+  /* Schnellvergleich: auf Smartphones als lesbare Karten statt Mini-Tabelle. */
+  .overview-panel{padding-left:12px;padding-right:12px}
+  .overview-table{width:100%;max-width:100%;overflow:visible;border:0;background:transparent;margin-top:16px}
+  .overview-table table{display:block;width:100%;max-width:100%;min-width:0;border-collapse:separate}
+  .overview-table thead{display:none}
+  .overview-table tbody{display:grid;grid-template-columns:minmax(0,1fr);gap:11px;width:100%}
+  .overview-table tr{display:block;width:100%;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .overview-table td{display:grid;grid-template-columns:minmax(90px,31%) minmax(0,1fr);gap:10px;width:100%;min-width:0;max-width:100%;padding:9px 11px;border-bottom:1px solid #e7eef1;font-size:.82rem;line-height:1.4;white-space:normal;overflow-wrap:anywhere;word-break:normal}
+  .overview-table td:last-child{border-bottom:0}
+  .overview-table td::before{display:block;font-size:.65rem;font-weight:950;letter-spacing:.04em;text-transform:uppercase;color:#61798a}
+  .overview-table td:nth-child(1)::before{content:"Land"}
+  .overview-table td:nth-child(2)::before{content:"Bewertung"}
+  .overview-table td:nth-child(3)::before{content:"Prüfpunkt"}
+  .overview-table td:nth-child(4)::before{content:"Warum"}
+  .table-status{display:flex;gap:7px;align-items:flex-start;line-height:1.35;min-width:0}
+  .table-status span{flex:0 0 9px;width:9px;height:9px;margin-top:3px}
+
+  .group-title{margin-top:48px}
+  .country-block{width:100%;max-width:100%;min-width:0;overflow:hidden}
+  .country-head{display:grid;grid-template-columns:minmax(0,1fr);gap:11px;padding:16px}
+  .country-head>div:first-child{min-width:0;max-width:100%}
+  .country-head h2{font-size:1.58rem;line-height:1.08;overflow-wrap:anywhere}
+  .score-badge{width:100%;min-width:0;max-width:100%;padding:10px 11px}
+  .country-intro{padding:17px 16px 3px;font-size:.96rem;overflow-wrap:anywhere}
+  .country-facts{gap:8px;padding:11px 16px 6px}
+  .country-fact{min-width:0;min-height:0;padding:12px;overflow-wrap:anywhere}
+  .country-fact strong{font-size:.82rem;line-height:1.48;overflow-wrap:anywhere}
+  .evidence-grid{gap:9px;padding:9px 16px 6px}
+  .evidence{min-width:0;max-width:100%;padding:14px;overflow:hidden}
+  .evidence p{overflow-wrap:anywhere}
+  .verdict{margin:7px 16px 12px;padding:13px;overflow-wrap:anywhere}
+  .country-sources{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:0 16px 18px;max-width:100%}
+  .country-sources b{margin:0 0 1px}
+  .country-sources a,.sources a{display:block;width:100%;max-width:100%;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+  .country-sources a{min-height:42px;padding:9px 10px;line-height:1.3}
+
+  .five-panel{gap:18px}
+  .five-members{grid-template-columns:1fr 1fr;gap:7px}
+  .five-members span{min-width:0;overflow-wrap:anywhere}
+  .self-section{gap:13px;max-width:100%;overflow:hidden}
+  .self-image{min-height:0;aspect-ratio:16/9;width:100%;max-width:100%}
+  .self-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .protect-list{max-width:100%;padding-left:0}
+  .protect-list li{font-size:.86rem;line-height:1.45;overflow-wrap:anywhere}
+
+  .related-link-panel .related-cta{display:flex;width:100%;max-width:100%;justify-content:center;text-align:center;overflow-wrap:anywhere}
+
+  .sources details{width:100%;max-width:100%;min-width:0}
+  .sources summary{padding:12px 11px;overflow-wrap:anywhere}
+  .sources ul{max-width:100%;padding:0 10px 13px 25px}
+  .sources li{font-size:.82rem;overflow-wrap:anywhere;word-break:break-word}
+
+  .affiliate-mobile{display:block;width:min(280px,78vw);max-width:100%;margin:26px auto 0}
+  .affiliate-mobile img{display:block;width:100%;height:auto}
+  .inline-ad-wrap{width:min(300px,82vw);max-width:100%;margin:28px auto 50px;text-align:center}
+  .inline-ad{display:block;width:100%;max-width:100%;margin:0;overflow:hidden}
+  .inline-ad img{display:block;width:100%;max-width:100%;height:auto}
+  .inline-ad-extra-cta{display:inline-block;max-width:100%;min-height:42px;padding:9px 0 0;font-size:.76rem;overflow-wrap:anywhere}
+
+  .footer{width:100%;max-width:100%;padding:30px 14px 36px;overflow:hidden}
+  .footer a{display:inline-block;margin:3px 5px;overflow-wrap:anywhere}
 }
 
-.rotate-notice{
-  display:none;
+@media (max-width:370px){
+  .hero-inner,.quick-inner,.layout{width:calc(100% - 24px)}
+  .hero-meta,.quick-grid,.five-members{grid-template-columns:1fr}
+  .overview-table td{grid-template-columns:1fr;gap:3px}
+  .home-button{top:10px;left:10px}
 }
-
-@media(max-width:980px){
-  .hero-inner,
-  .quick-inner,
-  .layout{
-    width:calc(100% - 28px);
-  }
-}
-
-@media(max-width:760px) and (orientation:portrait){
-  body{overflow:hidden;}
-  .rotate-notice{
-    position:fixed;
-    inset:0;
-    z-index:10000;
-    display:grid;
-    place-items:center;
-    padding:24px;
-    background:rgba(6,24,43,.72);
-    backdrop-filter:blur(7px);
-    -webkit-backdrop-filter:blur(7px);
-  }
-  .rotate-notice-card{
-    width:min(330px,calc(100vw - 42px));
-    padding:24px 22px 22px;
-    border:1px solid rgba(126,225,239,.34);
-    border-radius:16px;
-    background:linear-gradient(145deg,#ffffff,#eef8fa);
-    box-shadow:0 22px 60px rgba(2,18,32,.38);
-    color:#10263e;
-    text-align:center;
-  }
-  .rotate-notice-icon{
-    display:grid;
-    place-items:center;
-    width:54px;
-    height:54px;
-    margin:0 auto 13px;
-    border-radius:50%;
-    background:#0a314d;
-    color:#fff;
-    font-size:2rem;
-    line-height:1;
-    font-weight:900;
-  }
-  .rotate-notice-card strong{
-    display:block;
-    margin-bottom:7px;
-    color:#0b3552;
-    font-size:1.08rem;
-  }
-  .rotate-notice-card p{
-    margin:0;
-    color:#526b7b;
-    font-size:.91rem;
-    line-height:1.5;
-  }
-}
-
 </style>
 </head>
 <body>
-<div class="rotate-notice" role="status" aria-live="polite">
-  <div class="rotate-notice-card">
-    <div class="rotate-notice-icon" aria-hidden="true">↻</div>
-    <strong>Bitte Smartphone drehen</strong>
-    <p>Für die beste Darstellung dieses Security-Guides bitte ins Querformat wechseln.</p>
-  </div>
-</div>
-
-<!-- Smart Remote Life Security Europa Mobile v7 -->
+<!-- Smart Remote Life Security Europa Mobile v8 -->
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 <a aria-label="Zur Sicherheits-Hauptseite" class="home-button" href="digitale-freiheit-weltweit.html"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.5 10.5 12 3l8.5 7.5"></path><path d="M5.5 9.5V21h13V9.5"></path><path d="M9.5 21v-6h5v6"></path></svg></a>
 <header class="hero"><div class="hero-inner"><div class="hero-copy"><span class="hero-kicker">Europa · Digitale Freiheit · Datenschutz · Überwachung</span><h1>Wie frei ist Europa digital wirklich?</h1><p>10 Länder im tiefen Vergleich – nicht nur nach Scores, sondern nach <strong>Recht, technischen Möglichkeiten, dokumentierter Praxis und Hinweisen</strong>. Von Island und Finnland bis Belarus und Russland.</p><div class="hero-meta"><span>10 Länder</span><span>4 Analyse-Ebenen</span><span>eigene Privacy-Ampel</span><span>Stand August 2026</span></div></div></div></header>
