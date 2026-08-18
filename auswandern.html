@@ -324,15 +324,142 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
     font-size:.95rem;
   }
 }
+
+/* AUSWANDERN HAUPTSEITE · PROFESSIONAL REFINEMENT 18.08.2026
+   Nur visuelle Optimierung. SEO/Schema/Affiliate unverändert. */
+
+.hero::before{
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.88) 26%,
+      rgba(255,255,255,.74) 44%,
+      rgba(255,255,255,.34) 70%,
+      rgba(255,255,255,.10) 100%)!important;
+}
+.hero-inner{
+  align-items:flex-start!important;
+  justify-content:center!important;
+  text-align:left!important;
+  padding:94px 58px 82px!important;
+}
+.hero-copy-panel{
+  max-width:760px;
+  padding:26px 30px;
+  border-radius:28px;
+  background:rgba(255,255,255,.48);
+  border:1px solid rgba(255,255,255,.58);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+}
+.hero h1{
+  margin:0 0 14px!important;
+  max-width:700px;
+  color:#102033;
+  font-size:clamp(3rem,5vw,5rem)!important;
+  line-height:.98!important;
+  letter-spacing:-.058em!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.28);
+}
+.hero p{
+  max-width:660px!important;
+  margin:0!important;
+  color:#42566b!important;
+  font-size:1.08rem!important;
+  line-height:1.68!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.22);
+}
+
+.continent-media::after{
+  background:linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.84) 42%,rgba(255,255,255,.22) 78%)!important;
+}
+.continent-copy{
+  left:28px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  max-width:58%!important;
+}
+.continent-copy h2{
+  margin:0 0 10px!important;
+  max-width:620px;
+}
+.continent-copy p{
+  max-width:610px;
+}
+.image-cta-right{
+  position:absolute;
+  right:28px;
+  bottom:24px;
+  z-index:4;
+  margin-top:0!important;
+  box-shadow:0 10px 24px rgba(33,75,96,.10);
+}
+
+.security-card .continent-media::after{
+  background:linear-gradient(90deg,rgba(4,23,41,.94),rgba(4,23,41,.80) 48%,rgba(4,23,41,.18) 84%)!important;
+}
+.security-card .image-cta-right{
+  background:rgba(9,55,84,.92);
+  border-color:rgba(131,229,242,.30);
+  color:#e7fbff;
+}
+
+@media(max-width:860px){
+  .hero-copy-panel{
+    max-width:690px;
+    padding:22px 24px;
+    background:rgba(255,255,255,.58);
+  }
+}
+@media(max-width:720px){
+  .hero::before{
+    background:linear-gradient(180deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.82) 54%,rgba(255,255,255,.24) 100%)!important;
+  }
+  .hero-inner{
+    align-items:flex-start!important;
+    text-align:left!important;
+    padding:76px 22px 34px!important;
+  }
+  .hero-copy-panel{
+    max-width:none;
+    width:100%;
+    padding:18px 18px 16px;
+    border-radius:22px;
+    background:rgba(255,255,255,.70);
+  }
+  .hero h1{
+    max-width:none;
+    font-size:clamp(2.35rem,9vw,3.2rem)!important;
+  }
+  .hero p{
+    max-width:none!important;
+    font-size:1rem!important;
+  }
+  .continent-media::after{
+    background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.82) 58%,rgba(255,255,255,.18))!important;
+  }
+  .continent-copy{
+    left:22px!important;
+    right:22px!important;
+    top:30px!important;
+    transform:none!important;
+    max-width:none!important;
+  }
+  .image-cta-right{
+    right:22px;
+    bottom:18px;
+  }
+}
 </style>
 </head>
 <body>
 <div class="topbar"><a class="home-btn" href="index.html" aria-label="Zur Startseite">⌂</a></div>
 <header class="hero">
   <div class="hero-inner">
-    <span class="eyebrow">🌍 Smart Remote Life · Auswandern</span>
-    <h1>Auswandern nach Kontinent</h1>
-    <p>Nicht einfach irgendein Traumland auswählen: Wir vergleichen mögliche Ziele nach denselben 12 Kriterien – von Sicherheit und Langzeitmiete über Remote Work und Medizin bis Meer, Klima, Alltag und Leben mit Kind.</p>
+    <div class="hero-copy-panel">
+      <h1>Auswandern nach Kontinent</h1>
+      <p>Nicht einfach irgendein Traumland auswählen: Wir vergleichen mögliche Ziele nach denselben 12 Kriterien – von Sicherheit und Langzeitmiete über Remote Work und Medizin bis Meer, Klima, Alltag und Leben mit Kind.</p>
+    </div>
   </div>
   <span class="hero-ai" aria-label="KI-generiertes Bild">KI</span>
 </header>
@@ -356,8 +483,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="auswandern-europa-hero.png" alt="Europäische Küstenlandschaft mit Bergen und Ort am Meer">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern in Europa</h2><p><span class="country-list">Montenegro · Albanien · Portugal · Kroatien · Bulgarien · Nordmazedonien</span><span class="trigger-copy">Finde heraus, welches Ziel Ruhe, Meer und alltagstaugliche Kosten am besten verbindet.</span></p><span class="image-cta">Zum Europa-Check →</span>
-            </div>
+              <h2>Auswandern in Europa</h2><p><span class="country-list">Montenegro · Albanien · Portugal · Kroatien · Bulgarien · Nordmazedonien</span><span class="trigger-copy">Finde heraus, welches Ziel Ruhe, Meer und alltagstaugliche Kosten am besten verbindet.</span></p></div>
+            <span class="image-cta image-cta-right">Zum Europa-Check →</span>
           </div>
         </a>
       </article>
@@ -368,8 +495,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="auswandern-afrika-hero.png" alt="Tropische Küste mit Palmen, türkisfarbenem Meer und Bergen">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Afrika</h2><p><span class="country-list">Mauritius · Seychellen · Sansibar · Kap Verde · Kenia · Madagaskar · Kamerun</span><span class="trigger-copy">Entdecke, wo Inselgefühl, Wärme und ein machbarer Alltag wirklich zusammenpassen.</span></p><span class="image-cta">Zum Afrika-Check →</span>
-            </div>
+              <h2>Auswandern nach Afrika</h2><p><span class="country-list">Mauritius · Seychellen · Sansibar · Kap Verde · Kenia · Madagaskar · Kamerun</span><span class="trigger-copy">Entdecke, wo Inselgefühl, Wärme und ein machbarer Alltag wirklich zusammenpassen.</span></p></div>
+            <span class="image-cta image-cta-right">Zum Afrika-Check →</span>
           </div>
         </a>
       </article>
@@ -380,8 +507,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="asien-hero.png" alt="Tropische Küstenlandschaft als KI-Stimmungsbild für den Asien-Auswandercheck">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Asien</h2><p><span class="country-list">Malediven · Sri Lanka · Langkawi / Malaysia · Bali / Indonesien</span><span class="trigger-copy">Prüfe, welches Ziel sich nach Freiheit anfühlt – und nicht nur nach Urlaub.</span></p><span class="image-cta">Zum Asien-Check →</span>
-            </div>
+              <h2>Auswandern nach Asien</h2><p><span class="country-list">Malediven · Sri Lanka · Langkawi / Malaysia · Bali / Indonesien</span><span class="trigger-copy">Prüfe, welches Ziel sich nach Freiheit anfühlt – und nicht nur nach Urlaub.</span></p></div>
+            <span class="image-cta image-cta-right">Zum Asien-Check →</span>
           </div>
         </a>
       </article>
@@ -392,8 +519,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="mittelamerika-karibik-hero.png" alt="Tropische Küste als KI-Stimmungsbild für Mittelamerika und die Karibik">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Mittelamerika & Karibik</h2><p><span class="country-list">Costa Rica · Panama · Dominikanische Republik · Mexiko</span><span class="trigger-copy">Vergleiche, wo tropisches Lebensgefühl, Budget und praktische Alltagstauglichkeit zusammenkommen.</span></p><span class="image-cta">Zum Karibik-Check →</span>
-            </div>
+              <h2>Auswandern nach Mittelamerika & Karibik</h2><p><span class="country-list">Costa Rica · Panama · Dominikanische Republik · Mexiko</span><span class="trigger-copy">Vergleiche, wo tropisches Lebensgefühl, Budget und praktische Alltagstauglichkeit zusammenkommen.</span></p></div>
+            <span class="image-cta image-cta-right">Zum Karibik-Check →</span>
           </div>
         </a>
       </article>
@@ -406,8 +533,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="suedamerika-hero.png" alt="Südamerikanische Küsten- und Berglandschaft als KI-Stimmungsbild für den Südamerika-Auswandercheck">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Südamerika</h2><p><span class="country-list">Ecuador / Galápagos · Paraguay · Uruguay · Argentinien · Brasilien · Kolumbien</span><span class="trigger-copy">Entdecke, welches Land Natur, Freiheit und bezahlbaren Alltag am besten verbindet.</span></p><span class="image-cta">Zum Südamerika-Check →</span>
-            </div>
+              <h2>Auswandern nach Südamerika</h2><p><span class="country-list">Ecuador / Galápagos · Paraguay · Uruguay · Argentinien · Brasilien · Kolumbien</span><span class="trigger-copy">Entdecke, welches Land Natur, Freiheit und bezahlbaren Alltag am besten verbindet.</span></p></div>
+            <span class="image-cta image-cta-right">Zum Südamerika-Check →</span>
           </div>
         </a>
       </article>
@@ -418,8 +545,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="suedpazifik-ozeanien-hero.png" alt="Tropische Inselwelt als KI-Stimmungsbild für Südpazifik und Ozeanien">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern in den Südpazifik & nach Ozeanien</h2><p><span class="country-list">Fidschi · Cookinseln / Aitutaki · Französisch-Polynesien / Bora Bora · Samoa · Tonga · Vanuatu</span><span class="trigger-copy">Sieh, welche Inselwelt wirklich zu deinem Traum von Ruhe, Meer und Neuanfang passt.</span></p><span class="image-cta">Zum Südpazifik-Check →</span>
-            </div>
+              <h2>Auswandern in den Südpazifik & nach Ozeanien</h2><p><span class="country-list">Fidschi · Cookinseln / Aitutaki · Französisch-Polynesien / Bora Bora · Samoa · Tonga · Vanuatu</span><span class="trigger-copy">Sieh, welche Inselwelt wirklich zu deinem Traum von Ruhe, Meer und Neuanfang passt.</span></p></div>
+            <span class="image-cta image-cta-right">Zum Südpazifik-Check →</span>
           </div>
         </a>
       </article>
@@ -432,8 +559,8 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <div class="continent-copy">
               <h2>Digitale Freiheit weltweit</h2>
               <p><strong>Datenschutz · Überwachung · Internetfreiheit</strong><br>Entdecke unsere Security-Länderchecks für sechs Weltregionen.</p>
-              <span class="image-cta">Zu den Security-Checks →</span>
-            </div>
+              </div>
+            <span class="image-cta image-cta-right">Zu den Security-Checks →</span>
           </div>
         </a>
       </article>
