@@ -450,6 +450,27 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
     bottom:18px;
   }
 }
+
+/* AUSWANDERN HAUPTSEITE · FINAL HERO SHARPER 18.08.2026
+   Nur Hero-Bild klarer sichtbar. Copy-Panel bleibt halbtransparent. */
+.hero::before{
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.82) 0%,
+      rgba(255,255,255,.68) 24%,
+      rgba(255,255,255,.48) 42%,
+      rgba(255,255,255,.18) 70%,
+      rgba(255,255,255,.03) 100%)!important;
+}
+@media(max-width:720px){
+  .hero::before{
+    background:
+      linear-gradient(180deg,
+        rgba(255,255,255,.84) 0%,
+        rgba(255,255,255,.68) 50%,
+        rgba(255,255,255,.14) 100%)!important;
+  }
+}
 </style>
 </head>
 <body>
