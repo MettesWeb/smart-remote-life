@@ -487,6 +487,23 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
     align-self:start;
   }
 }
+
+/* SECURITY DESKTOP SIDEBAR STICKY FIX · 18.08.2026
+   Nur Wiederherstellung des früheren Sticky-Verhaltens des Seitenbanners. */
+@media (min-width:1500px){
+  html,body{
+    overflow-x:clip!important;
+  }
+  .layout{
+    overflow:visible!important;
+  }
+  .side-ad{
+    position:sticky!important;
+    top:22px!important;
+    align-self:start!important;
+    height:max-content;
+  }
+}
 </style>
 </head>
 <body>
