@@ -230,6 +230,100 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
     background:linear-gradient(180deg,rgba(4,23,41,.92),rgba(4,23,41,.74) 58%,rgba(4,23,41,.22));
   }
 }
+
+/* AUSWANDERN HAUPTSEITE · REFINEMENT 18.08.2026
+   Nur Hero + Intro + Karten-Textführung. SEO/Schema/Affiliate unverändert. */
+.eyebrow{display:none!important}
+
+.hero::before{
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.84) 0%, rgba(255,255,255,.72) 34%, rgba(255,255,255,.22) 72%, rgba(255,255,255,.04) 100%)!important;
+}
+.hero-inner{
+  align-items:flex-start!important;
+  justify-content:center!important;
+  text-align:left!important;
+  padding:96px 58px 80px!important;
+}
+.hero h1{
+  margin:0 0 14px!important;
+  max-width:760px;
+}
+.hero p{
+  max-width:760px!important;
+  margin:0!important;
+  font-size:1.06rem!important;
+}
+
+.intro h2{
+  margin:0 0 12px;
+  font-size:1.72rem;
+}
+.intro p{
+  max-width:900px;
+}
+.criteria span{
+  background:#eef9f4;
+  color:#346a54;
+  border-color:rgba(90,160,125,.14);
+}
+
+.continent-copy{
+  left:28px!important;
+  top:52%!important;
+  max-width:56%!important;
+}
+.continent-copy h2{
+  margin:0 0 12px!important;
+}
+.country-list{
+  display:block;
+  margin:0 0 8px;
+  color:#356786;
+  font-size:.92rem;
+  font-weight:850;
+  line-height:1.55;
+}
+.trigger-copy{
+  display:block;
+  color:#546173;
+  font-size:.98rem;
+  line-height:1.55;
+}
+.image-cta{
+  margin-top:18px!important;
+}
+
+@media(max-width:720px){
+  .hero::before{
+    background:linear-gradient(180deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.72) 54%, rgba(255,255,255,.18) 100%)!important;
+  }
+  .hero-inner{
+    align-items:flex-start!important;
+    text-align:left!important;
+    padding:74px 22px 34px!important;
+  }
+  .hero h1{
+    max-width:none;
+  }
+  .hero p{
+    max-width:none!important;
+    font-size:1rem!important;
+  }
+  .continent-copy{
+    left:22px!important;
+    right:22px!important;
+    top:34px!important;
+    max-width:none!important;
+  }
+  .country-list{
+    font-size:.86rem;
+    line-height:1.48;
+  }
+  .trigger-copy{
+    font-size:.95rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -248,9 +342,9 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
 
   <div class="content">
     <section class="intro">
-      <h2>6 fertige Regionen · ein einheitlicher Auswander-Check</h2>
-      <p>Europa, Afrika, Asien, Mittelamerika & Karibik, Südamerika sowie Südpazifik & Ozeanien sind bereits fertig. Weitere Länder und Regionen folgen Schritt für Schritt, damit du direkt vergleichen kannst, welches Ziel wirklich zu deinem Leben passt.</p>
-      <div class="criteria"><span>Sicherheit</span><span>Medizin</span><span>Kosten & Miete</span><span>Remote Work</span><span>Meer & Baden</span><span>Klima</span><span>Kind & Alltag</span><span>Freiheit</span></div>
+      <h2>Unser einheitlicher 12-Punkte-Auswander-Check</h2>
+      <p>Alle Regionen werden nach denselben 12 Kriterien geprüft, damit du wirklich vergleichen kannst: nicht nur nach Gefühl, sondern nach Alltag, Kosten, Freiheit, Meer und echter Langzeittauglichkeit.</p>
+      <div class="criteria"><span>Sicherheit</span><span>Gesundheitsversorgung</span><span>Lebenshaltungskosten</span><span>Remote-Arbeit</span><span>Ruhe &amp; Lebensgefühl</span><span>Natur &amp; Meer</span><span>Baden</span><span>Klima</span><span>Natur- &amp; Gesundheitsrisiken</span><span>Leben mit Kind</span><span>Persönliche Freiheit</span><span>Erreichbarkeit</span></div>
     </section>
 
     <div class="leaderboard"><span class="ad-mark">Werbung</span><a href="https://bohle-digital.de/freelancer-toolkit/?aff=tiramcreations" target="_blank" rel="sponsored noopener"><img src="affiliate-freelancer-toolkit.png" alt="Werbebanner für das Freelancer Toolkit"></a></div>
@@ -262,9 +356,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="auswandern-europa-hero.png" alt="Europäische Küstenlandschaft mit Bergen und Ort am Meer">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern in Europa: 6 Länder</h2>
-              <p><strong>Montenegro · Albanien · Portugal · Kroatien · Bulgarien · Nordmazedonien</strong><br>Sechs europäische Ziele im großen 12-Punkte-Check.</p>
-              <span class="image-cta">Europa-Check öffnen →</span>
+              <h2>Auswandern in Europa</h2><p><span class="country-list">Montenegro · Albanien · Portugal · Kroatien · Bulgarien · Nordmazedonien</span><span class="trigger-copy">Finde heraus, welches Ziel Ruhe, Meer und alltagstaugliche Kosten am besten verbindet.</span></p><span class="image-cta">Zum Europa-Check →</span>
             </div>
           </div>
         </a>
@@ -276,9 +368,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="auswandern-afrika-hero.png" alt="Tropische Küste mit Palmen, türkisfarbenem Meer und Bergen">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Afrika: 7 Länder</h2>
-              <p><strong>Mauritius · Seychellen · Sansibar · Kap Verde · Kenia · Madagaskar · Kamerun</strong><br>Sieben afrikanische Ziele mit Fokus auf Alltag, Budget, Meer und Remote Work.</p>
-              <span class="image-cta">Afrika-Check öffnen →</span>
+              <h2>Auswandern nach Afrika</h2><p><span class="country-list">Mauritius · Seychellen · Sansibar · Kap Verde · Kenia · Madagaskar · Kamerun</span><span class="trigger-copy">Entdecke, wo Inselgefühl, Wärme und ein machbarer Alltag wirklich zusammenpassen.</span></p><span class="image-cta">Zum Afrika-Check →</span>
             </div>
           </div>
         </a>
@@ -290,9 +380,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="asien-hero.png" alt="Tropische Küstenlandschaft als KI-Stimmungsbild für den Asien-Auswandercheck">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Asien: 4 Ziele</h2>
-              <p><strong>Malediven · Sri Lanka · Langkawi / Malaysia · Bali / Indonesien</strong><br>Vier sehr unterschiedliche Möglichkeiten für Meer, Remote Work und längeres Leben.</p>
-              <span class="image-cta">Asien-Check öffnen →</span>
+              <h2>Auswandern nach Asien</h2><p><span class="country-list">Malediven · Sri Lanka · Langkawi / Malaysia · Bali / Indonesien</span><span class="trigger-copy">Prüfe, welches Ziel sich nach Freiheit anfühlt – und nicht nur nach Urlaub.</span></p><span class="image-cta">Zum Asien-Check →</span>
             </div>
           </div>
         </a>
@@ -304,9 +392,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="mittelamerika-karibik-hero.png" alt="Tropische Küste als KI-Stimmungsbild für Mittelamerika und die Karibik">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Mittelamerika & Karibik: 4 Länder</h2>
-              <p><strong>Costa Rica · Panama · Dominikanische Republik · Mexiko</strong><br>Vier Ziele mit Fokus auf Kosten, Sicherheit, Meer und Remote Work.</p>
-              <span class="image-cta">Karibik-Check öffnen →</span>
+              <h2>Auswandern nach Mittelamerika & Karibik</h2><p><span class="country-list">Costa Rica · Panama · Dominikanische Republik · Mexiko</span><span class="trigger-copy">Vergleiche, wo tropisches Lebensgefühl, Budget und praktische Alltagstauglichkeit zusammenkommen.</span></p><span class="image-cta">Zum Karibik-Check →</span>
             </div>
           </div>
         </a>
@@ -320,9 +406,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="suedamerika-hero.png" alt="Südamerikanische Küsten- und Berglandschaft als KI-Stimmungsbild für den Südamerika-Auswandercheck">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern nach Südamerika: 6 Länder</h2>
-              <p><strong>Ecuador / Galápagos · Paraguay · Uruguay · Argentinien · Brasilien · Kolumbien</strong><br>Sechs Länder zwischen Küste, Natur, günstigerem Alltag und digitaler Infrastruktur.</p>
-              <span class="image-cta">Südamerika-Check öffnen →</span>
+              <h2>Auswandern nach Südamerika</h2><p><span class="country-list">Ecuador / Galápagos · Paraguay · Uruguay · Argentinien · Brasilien · Kolumbien</span><span class="trigger-copy">Entdecke, welches Land Natur, Freiheit und bezahlbaren Alltag am besten verbindet.</span></p><span class="image-cta">Zum Südamerika-Check →</span>
             </div>
           </div>
         </a>
@@ -334,9 +418,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
             <img src="suedpazifik-ozeanien-hero.png" alt="Tropische Inselwelt als KI-Stimmungsbild für Südpazifik und Ozeanien">
             <span class="ai">KI</span>
             <div class="continent-copy">
-              <h2>Auswandern: Südpazifik & Ozeanien – 6 Ziele</h2>
-              <p><strong>Fidschi · Cookinseln / Aitutaki · Französisch-Polynesien / Bora Bora · Samoa · Tonga · Vanuatu</strong><br>Sechs Inselwelten zwischen Lagunen-Traum, Slow Life, Entfernung und höheren Importkosten.</p>
-              <span class="image-cta">Südpazifik-Check öffnen →</span>
+              <h2>Auswandern in den Südpazifik & nach Ozeanien</h2><p><span class="country-list">Fidschi · Cookinseln / Aitutaki · Französisch-Polynesien / Bora Bora · Samoa · Tonga · Vanuatu</span><span class="trigger-copy">Sieh, welche Inselwelt wirklich zu deinem Traum von Ruhe, Meer und Neuanfang passt.</span></p><span class="image-cta">Zum Südpazifik-Check →</span>
             </div>
           </div>
         </a>
