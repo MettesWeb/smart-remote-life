@@ -869,6 +869,45 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
     height:max-content;
   }
 }
+
+/* Smart Remote Life · Proton VPN Sidebar TEST · nur Desktop · 20.08.2026 */
+.proton-side-ad{display:none}
+@media(min-width:1500px){
+  .proton-side-ad{
+    display:block;
+    grid-column:3;
+    grid-row:1;
+    position:sticky;
+    top:22px;
+    margin-top:56px;
+    align-self:start;
+    justify-self:center;
+    width:min(120px,100%);
+  }
+  .proton-side-ad .ad-label{
+    display:block;
+    text-align:center;
+    font-size:.62rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#758592;
+    margin-bottom:6px;
+  }
+  .proton-side-link{
+    display:block;
+    width:100%;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 14px 34px rgba(7,31,48,.12);
+    text-decoration:none;
+  }
+  .proton-side-link img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1128,6 +1167,20 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
         <strong>Hinweis:</strong> Diese Inhalte dienen der allgemeinen Information und redaktionellen Einordnung. Sie sind keine Rechts-, Datenschutz- oder Sicherheitsberatung und keine Garantie für die tatsächliche Praxis in einem konkreten Einzelfall. Für wichtige Entscheidungen sollten aktuelle Originalquellen und bei Bedarf fachkundige Beratung herangezogen werden.
       </section>
     </article>
+
+    <aside class="proton-side-ad" aria-label="Werbung für Proton VPN">
+      <span class="ad-label">Werbung</span>
+      <a class="proton-side-link"
+         href="https://go.getproton.me/SH2x3"
+         target="_blank"
+         rel="sponsored noopener noreferrer"
+         aria-label="Proton VPN ansehen">
+        <img src="VPN_SVL_20X600@2x.png"
+             alt="Proton VPN – sicher und privat im Internet"
+             loading="lazy"
+             decoding="async">
+      </a>
+    </aside>
   </main>
 
   <footer class="footer">
