@@ -518,6 +518,26 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
     border-radius:10px;
   }
 }
+
+/* Smart Remote Life Logo im Hauptheader · nur Branding-Ergaenzung */
+.srl-header-logo{
+  position:absolute;
+  top:34px;
+  left:84px;
+  z-index:4;
+  width:min(290px,24vw);
+  height:auto;
+  display:block;
+}
+@media(max-width:720px){
+  .srl-header-logo{
+    top:66px;
+    left:68px;
+    width:174px;
+    max-width:calc(100% - 84px);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -529,6 +549,7 @@ a{color:#356e8d}.topbar{width:min(1180px,calc(100% - 32px));margin:0 auto;paddin
   </svg>
 </a>
 <header class="hero">
+  <img class="srl-header-logo" src="smart-remote-life-logo.png" alt="Smart Remote Life">
   <div class="hero-inner">
     <div class="hero-copy-panel">
       <h1>Auswandern nach Kontinent</h1>
