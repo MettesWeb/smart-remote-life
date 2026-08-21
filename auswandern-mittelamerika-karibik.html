@@ -475,13 +475,147 @@ footer a{margin:0 6px}
 .discover-card .dc-cta{display:block;background:#0c5b32;color:white;border-radius:12px;padding:10px 12px;font-weight:900;text-align:center;font-size:.79rem}
 .mobile-inline-ad .discover-card{width:min(290px,86vw);margin:0 auto}
 
+
+
+/* ===== Smart Remote Life · Auswandern Header Test =====
+   Nur Header-Layout + Homebutton + Markenlogo. Rest der Seite unverändert. */
+.home-button{
+  position:fixed;
+  top:18px;
+  left:20px;
+  z-index:70;
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 10px 30px rgba(4,25,42,.18);
+  border-radius:12px;
+  color:#0b3552;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  transition:transform .18s ease,box-shadow .18s ease;
+  text-decoration:none;
+}
+.home-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(4,25,42,.24);
+}
+.home-button:focus-visible{
+  outline:3px solid #d9aa45;
+  outline-offset:3px;
+}
+.home-button svg{
+  width:22px;
+  height:22px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.hero{
+  width:100%;
+  min-height:680px;
+  margin:0 0 34px;
+  border-radius:0;
+  border:0;
+  box-shadow:none;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.92) 23%,
+      rgba(255,255,255,.76) 42%,
+      rgba(255,255,255,.34) 68%,
+      rgba(255,255,255,.06) 100%),
+    url('mittelamerika-karibik-hero.png');
+  background-repeat:no-repeat;
+  background-position:center 46%;
+  background-size:cover;
+}
+.hero-inner{
+  width:min(1180px,calc(100% - 42px));
+  min-height:680px;
+  margin:0 auto;
+  padding:118px 58px 76px;
+  display:flex;
+  align-items:center;
+}
+.hero-copy{
+  max-width:680px;
+  padding:27px 30px 29px;
+  border-radius:28px;
+  background:rgba(255,255,255,.50);
+  border:1px solid rgba(255,255,255,.62);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+}
+.srl-header-logo{
+  position:absolute;
+  top:34px;
+  left:84px;
+  z-index:4;
+  width:min(290px,24vw);
+  height:auto;
+  display:block;
+}
+@media(max-width:720px){
+  .home-button{
+    top:12px;
+    left:12px;
+    width:42px;
+    height:42px;
+    border-radius:10px;
+  }
+  .hero{
+    min-height:470px;
+    margin-bottom:28px;
+    background:
+      linear-gradient(90deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.88) 36%,
+        rgba(255,255,255,.55) 68%,
+        rgba(255,255,255,.18) 100%),
+      url('mittelamerika-karibik-hero.png');
+    background-position:center center;
+    background-size:cover;
+  }
+  .hero-inner{
+    width:min(100% - 28px,620px);
+    min-height:470px;
+    padding:118px 18px 28px;
+    align-items:flex-end;
+  }
+  .hero-copy{
+    max-width:100%;
+    width:100%;
+    padding:20px 18px 21px;
+    border-radius:22px;
+    background:rgba(255,255,255,.68);
+  }
+  .srl-header-logo{
+    top:66px;
+    left:68px;
+    width:174px;
+    max-width:calc(100% - 84px);
+  }
+}
+
 </style>
 <!-- Smart Remote Life · Mittelamerika & Karibik Blog · Basis: Europa/Afrika/Asien Master · 15.08.2026 -->
 </head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-<div class="topbar"><a class="home-btn" href="auswandern.html" aria-label="Zur Auswandern-Übersicht">⌂</a></div>
-<header class="hero"><div class="hero-inner"><div class="hero-copy"><span class="eyebrow">🌴 Mittelamerika & Karibik · Auswandern & Reiseziele</span><h1>Auswandern nach Mittelamerika & in die Karibik: 4 Ziele</h1><p>Costa Rica, Panama mit Bocas del Toro, die Dominikanische Republik und Mexiko: vier sehr unterschiedliche Möglichkeiten für Meer, Remote Work und längeres Leben. Wir prüfen sie wieder nach denselben 12 Kriterien wie Europa, Afrika und Asien.</p></div><span class="hero-ai-mark" aria-label="KI-generiertes Headerbild">KI</span></div></header>
+<a class="home-button" href="auswandern.html" aria-label="Zur Auswandern-Übersicht">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3.5 10.5 12 3l8.5 7.5"></path>
+    <path d="M5.5 9.5V21h13V9.5"></path>
+    <path d="M9.5 21v-6h5v6"></path>
+  </svg>
+</a>
+<header class="hero">
+  <img class="srl-header-logo" src="smart-remote-life-logo.png" alt="Smart Remote Life"><div class="hero-inner"><div class="hero-copy"><span class="eyebrow">🌴 Mittelamerika & Karibik · Auswandern & Reiseziele</span><h1>Auswandern nach Mittelamerika & in die Karibik: 4 Ziele</h1><p>Costa Rica, Panama mit Bocas del Toro, die Dominikanische Republik und Mexiko: vier sehr unterschiedliche Möglichkeiten für Meer, Remote Work und längeres Leben. Wir prüfen sie wieder nach denselben 12 Kriterien wie Europa, Afrika und Asien.</p></div><span class="hero-ai-mark" aria-label="KI-generiertes Headerbild">KI</span></div></header>
 
 <main class="desktop-layout" id="main-content">
 <aside class="ad-rail ad-left" aria-label="Werbung: Staatenlos Auswander-Lexikon"><div class="ad-wrap"><span class="ad-mark">Werbung</span><a class="ad-link" href="https://www.digistore24.com/redir/234406/tiramcreations/" target="_blank" rel="sponsored noopener" aria-label="Auswander-Lexikon von Staatenlos ansehen"><img src="affiliate-staatenlos-auswanderlexikon.png" alt="Werbebanner für das Auswander-Lexikon von Staatenlos" loading="lazy"></a></div></aside>
