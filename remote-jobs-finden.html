@@ -949,6 +949,26 @@ footer a{margin:0 6px}.footer-aff{margin-top:12px;font-size:.74rem;color:#9297a2
     background:rgba(255,255,255,.68);
   }
 }
+
+/* Smart Remote Life Logo im Hauptheader · nur Branding-Ergaenzung */
+.srl-header-logo{
+  position:absolute;
+  top:34px;
+  left:84px;
+  z-index:4;
+  width:min(290px,24vw);
+  height:auto;
+  display:block;
+}
+@media(max-width:720px){
+  .srl-header-logo{
+    top:66px;
+    left:68px;
+    width:174px;
+    max-width:calc(100% - 84px);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -962,6 +982,7 @@ footer a{margin:0 6px}.footer-aff{margin-top:12px;font-size:.74rem;color:#9297a2
 </a>
 
 <header class="hero">
+  <img class="srl-header-logo" src="smart-remote-life-logo.png" alt="Smart Remote Life">
   <div class="hero-inner">
     <div class="hero-copy">
       <h1>Remote Jobs finden: Dein Weg zu mehr Freiheit im Arbeitsalltag</h1>
