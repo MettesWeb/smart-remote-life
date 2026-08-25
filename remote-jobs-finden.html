@@ -963,11 +963,98 @@ footer a{margin:0 6px}.footer-aff{margin-top:12px;font-size:.74rem;color:#9297a2
 }
 @media(max-width:720px){
   .srl-header-logo{
-    top:66px;
-    left:68px;
-    width:174px;
-    max-width:calc(100% - 84px);
+    top:70px;
+    left:50%;
+    transform:translateX(-50%);
+    width:172px;
+    max-width:calc(100% - 96px);
   }
+  .hero-inner{
+    padding-top:92px!important;
+  }
+}
+
+
+/* Remote Jobs · dezentes Rocketship Affiliate Slide-in */
+.rocketship-slidein{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:90;
+  width:min(360px,calc(100vw - 32px));
+  padding:18px 18px 16px;
+  border-radius:22px;
+  background:rgba(255,255,255,.97);
+  border:1px solid rgba(93,81,151,.14);
+  box-shadow:0 22px 58px rgba(43,38,78,.18);
+  transform:translateY(26px);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .24s ease,transform .24s ease;
+}
+.rocketship-slidein.is-visible{
+  transform:translateY(0);
+  opacity:1;
+  pointer-events:auto;
+}
+.rocketship-slidein-close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  border:0;
+  border-radius:50%;
+  background:#f4f1fb;
+  color:#5d5197;
+  font-size:1.15rem;
+  line-height:1;
+  cursor:pointer;
+}
+.rocketship-slidein-kicker{
+  display:block;
+  margin:0 38px 5px 0;
+  color:#7c68b8;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+}
+.rocketship-slidein h3{
+  margin:0 34px 7px 0;
+  font-size:1.16rem;
+  line-height:1.18;
+  color:#102033;
+}
+.rocketship-slidein p{
+  margin:0 0 12px;
+  color:#5f6d84;
+  font-size:.86rem;
+  line-height:1.5;
+}
+.rocketship-slidein .slidein-ad-note{
+  display:block;
+  margin-top:8px;
+  color:#9699a4;
+  font-size:.64rem;
+}
+.rocketship-slidein .cta-btn{
+  min-height:44px;
+  padding:11px 16px;
+  font-size:.83rem;
+}
+@media(max-width:720px){
+  .rocketship-slidein{
+    right:12px;
+    bottom:12px;
+    width:calc(100vw - 24px);
+    padding:16px 16px 14px;
+    border-radius:20px;
+  }
+  .rocketship-slidein h3{font-size:1.08rem}
+  .rocketship-slidein p{font-size:.82rem}
 }
 
 </style>
@@ -1207,6 +1294,16 @@ footer a{margin:0 6px}.footer-aff{margin-top:12px;font-size:.74rem;color:#9297a2
   </aside>
 </main>
 
+
+<aside class="rocketship-slidein" id="rocketship-slidein" aria-label="Werbung: Remote Rocketship" aria-hidden="true">
+  <button class="rocketship-slidein-close" type="button" aria-label="Hinweis schließen">×</button>
+  <span class="rocketship-slidein-kicker">Remote Job gefunden?</span>
+  <h3>Mehr passende Remote-Stellen entdecken</h3>
+  <p>Remote Rocketship bündelt Remote-Jobs aus vielen Unternehmensquellen und bietet praktische Filter nach Rolle, Land und Erfahrung.</p>
+  <a class="cta-btn" href="https://tolt.link/smartremotelife" target="_blank" rel="sponsored nofollow noopener">Remote Jobs entdecken →</a>
+  <span class="slidein-ad-note">Werbung · Partnerlink</span>
+</aside>
+
 <footer>
   <a href="index.html">Startseite</a> ·
   <a href="impressum.html">Impressum</a> ·
@@ -1215,5 +1312,38 @@ footer a{margin:0 6px}.footer-aff{margin-top:12px;font-size:.74rem;color:#9297a2
   <div class="footer-aff">Diese Seite enthält gekennzeichnete Affiliate- bzw. Empfehlungslinks.</div>
   <div style="margin-top:8px">© Smart Remote Life</div>
 </footer>
+
+<script>
+(function(){
+  var key="srl_rocketship_slidein_seen";
+  var box=document.getElementById("rocketship-slidein");
+  if(!box || sessionStorage.getItem(key)==="1") return;
+  var closeBtn=box.querySelector(".rocketship-slidein-close");
+  function closeSlidein(){
+    box.classList.remove("is-visible");
+    box.setAttribute("aria-hidden","true");
+    sessionStorage.setItem(key,"1");
+    window.removeEventListener("scroll",onScroll);
+  }
+  var targetHeading=[].slice.call(document.querySelectorAll("h2")).find(function(h){
+    return h.textContent.trim()==="Wo finde ich seriöse Remote Jobs?";
+  });
+
+  function onScroll(){
+    if(!targetHeading) return;
+    var triggerPoint=window.innerHeight*0.82;
+    if(targetHeading.getBoundingClientRect().top<=triggerPoint){
+      box.classList.add("is-visible");
+      box.setAttribute("aria-hidden","false");
+      sessionStorage.setItem(key,"1");
+      window.removeEventListener("scroll",onScroll);
+    }
+  }
+  if(closeBtn) closeBtn.addEventListener("click",closeSlidein);
+  window.addEventListener("scroll",onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
 </body>
 </html>
