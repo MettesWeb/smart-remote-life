@@ -47,7 +47,7 @@
   "url": "https://smart-remote-life.com/",
   "description": "Smart Remote Life: Guides zu Remote Jobs, Auswandern, digitaler Freiheit und Creator Setup – für ortsunabhängiges Arbeiten, Reisen und ein freieres digitales Leben.",
   "inLanguage": "de-DE",
-  "dateModified": "2026-08-27",
+  "dateModified": "2026-10-10",
   "author": {
     "@type": "Person",
     "name": "Marit Silva Gebhardt"
@@ -60,7 +60,7 @@
   "image": "https://smart-remote-life.com/smart-remote-life-bg-beach.png",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 6,
+    "numberOfItems": 7,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -97,6 +97,12 @@
         "position": 6,
         "name": "Business",
         "url": "https://smart-remote-life.com/business.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "English Articles",
+        "url": "https://smart-remote-life.com/english-articles.html"
       }
     ]
   }
@@ -378,89 +384,6 @@
       line-height: 1.4;
     }
 
-    .preferred-source {
-      margin-top: 28px;
-      padding: 22px;
-      border-radius: 28px;
-      background: rgba(255,255,255,.75);
-      border: 1px solid rgba(255,255,255,.9);
-      box-shadow: 0 18px 54px rgba(16,32,51,.08);
-      text-align: center;
-    }
-
-    .preferred-source h2 {
-      margin: 0 0 7px;
-      letter-spacing: -.03em;
-    }
-
-    .preferred-source p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .preferred-source [google-add-preferred-source-btn] {
-      display: flex;
-      justify-content: center;
-      min-height: 40px;
-    }
-
-    .newsletter-popup {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 30;
-      width: calc(100% - 44px);
-      max-width: 360px;
-      padding: 25px 22px 22px;
-      border: 1px solid rgba(255,255,255,.95);
-      border-radius: 24px;
-      background: rgba(255,253,251,.97);
-      box-shadow: 0 24px 70px rgba(16,32,51,.20);
-      color: var(--ink);
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity .22s ease, transform .22s ease;
-    }
-
-    .newsletter-popup[hidden] { display: none; }
-    .newsletter-popup.is-visible { opacity: 1; transform: translateY(0); }
-    .newsletter-popup h2 { margin: 0 38px 8px 0; font-size: 1.38rem; letter-spacing: -.03em; }
-    .newsletter-popup p { margin: 0 0 16px; color: var(--muted); line-height: 1.55; }
-    .newsletter-popup-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 40px;
-      height: 40px;
-      border: 0;
-      border-radius: 999px;
-      background: rgba(16,32,51,.07);
-      color: var(--ink);
-      font: inherit;
-      font-size: 1.45rem;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .newsletter-popup-close:hover { background: rgba(16,32,51,.12); }
-    .newsletter-popup-close:focus-visible,
-    .newsletter-popup-cta:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
-    .newsletter-popup-cta {
-      display: inline-flex;
-      min-height: 46px;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #244b94, #3d80d3 68%, #7fc8ef);
-      color: #fff;
-      font-size: .86rem;
-      font-weight: 850;
-      letter-spacing: .04em;
-      text-decoration: none;
-    }
-
     footer {
       margin-top: 42px;
       padding: 26px 0 10px;
@@ -482,17 +405,6 @@
       .latest-grid{grid-template-columns:1fr}
       .article-link { grid-template-columns: 92px 1fr; }
       .article-link img{width:92px;height:76px;}
-    }
-
-    @media (max-width: 520px) {
-      .preferred-source { padding: 19px 16px; border-radius: 23px; }
-      .newsletter-popup { right: 14px; bottom: 14px; padding: 23px 18px 18px; border-radius: 21px; }
-      .newsletter-popup h2 { font-size: 1.24rem; }
-      .newsletter-popup-cta { width: 100%; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .newsletter-popup { transition: none; }
     }
 
     /* Subtle lifestyle image layer – keeps the existing pastel palette intact */
@@ -994,13 +906,12 @@ body::before{
 }
 
 </style>
-<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 <main class="page" id="main-content">
 <section class="hero">
-<img alt="Smart Remote Life" class="hero-logo" src="smart-remote-life-logo-header.png" width="2048" height="682" fetchpriority="high"/>
+<img alt="Smart Remote Life" class="hero-logo" src="smart-remote-life-logo-header.png"/>
 <span aria-hidden="true" class="hero-ki-label">KI</span>
 <div class="hero-inner">
 <div class="hero-brand-panel">
@@ -1047,8 +958,8 @@ body::before{
 <a class="topic lavender" href="business.html">
 <span aria-hidden="true" class="topic-thumb thumb-business"></span>
 <h3>Business</h3>
-<p>Online-Business, E-Mail-Marketing, Automatisierung und digitale Produkte.</p>
-<span class="count">0 Beiträge</span>
+<p>Digitale Produkte, Facebook- &amp; Instagram-Ads und praktische Business-Challenges.</p>
+<span class="count">2 Beiträge</span>
 </a>
 <a class="topic mint" href="1-1-gespraech.html">
 <span aria-hidden="true" class="topic-thumb thumb-mentoring"></span>
@@ -1059,8 +970,8 @@ body::before{
 <a class="topic aqua" href="english-articles.html">
 <span aria-hidden="true" class="topic-thumb thumb-english"></span>
 <h3>English Articles</h3>
-<p>English guides about remote jobs, creator tools and digital work for an international audience.</p>
-<span class="count">Bereich öffnen</span>
+<p>English guides about remote jobs, digital work and a more location-independent life.</p>
+<span class="count">1 Article · Read now</span>
 </a>
 
 <a class="topic lavender" href="newsletter.html">
@@ -1074,39 +985,55 @@ body::before{
 <h2>Highlights im Blog</h2>
 <div class="latest-grid">
 <a class="article-link" href="digitale-freiheit-weltweit.html">
-<img alt="Dunkelblaues digitales Sicherheitsmotiv für die Smart Remote Life Security-Länderchecks" src="security-hero-cyber.png" loading="lazy" decoding="async" width="1672" height="941"/>
+<img alt="Dunkelblaues digitales Sicherheitsmotiv für die Smart Remote Life Security-Länderchecks" src="security-hero-cyber.png"/>
 <div>
 <strong>Digitale Freiheit weltweit</strong>
 <span>Vergleiche Datenschutz, Überwachung und Internetfreiheit in sechs Weltregionen.</span>
 </div>
 </a>
 <a class="article-link" href="auswandern.html">
-<img alt="Tropische Küstenlandschaft als Stimmungsbild für die Smart Remote Life Auswander-Länderchecks" src="auswandern-header-remote-asia.png" loading="lazy" decoding="async" width="1672" height="941"/>
+<img alt="Tropische Küstenlandschaft als Stimmungsbild für die Smart Remote Life Auswander-Länderchecks" src="auswandern-header-remote-asia.png"/>
 <div>
 <strong>Auswandern nach Kontinent</strong>
 <span>Sechs Regionen im einheitlichen 12-Punkte-Check für Alltag, Kosten, Meer und Remote Work.</span>
 </div>
 </a>
 <a class="article-link" href="remote-jobs-finden.html">
-<img alt="Remote arbeitende Person mit Laptop und Bergblick" src="remote-jobs-hero.png" loading="lazy" decoding="async" width="2172" height="724"/>
+<img alt="Remote arbeitende Person mit Laptop und Bergblick" src="remote-jobs-hero.png"/>
 <div>
 <strong>Remote Jobs finden</strong>
 <span>Finde seriöse Plattformen, passende Jobarten und bessere Wege in die Remote-Jobsuche.</span>
 </div>
 </a>
 <a class="article-link" href="tiktok-instagram-setup.html">
-<img alt="Creatorin mit Kamera und Ringlicht im Home-Studio" src="tech-header-real.png" loading="lazy" decoding="async" width="1672" height="941"/>
+<img alt="Creatorin mit Kamera und Ringlicht im Home-Studio" src="tech-header-real.png"/>
 <div>
 <strong>Creator Setup &amp; Technik</strong>
 <span>Was du für TikTok, Instagram, Reels und UGC wirklich brauchst – ohne Technik-Overload.</span>
 </div>
 </a>
+<a class="article-link" href="business-facebook-instagram-ads.html">
+<img alt="Heller Business-Arbeitsplatz als Motiv für digitale Produkte und Facebook-Instagram-Ads" src="theme-business.png"/>
+<div>
+<strong>Digitale Produkte &amp; Facebook/Instagram Ads</strong>
+<span>Digitale Produkte aufbauen, realistisch kalkulieren und mit bezahlter Sichtbarkeit weiterdenken.</span>
 </div>
-</section>
-<section class="preferred-source" aria-labelledby="preferred-source-title">
-<h2 id="preferred-source-title">Smart Remote Life als bevorzugte Quelle</h2>
-<p>Füge Smart Remote Life bei Google zu deinen bevorzugten Quellen hinzu.</p>
-<div google-add-preferred-source-btn data-theme="light" data-lang="de"></div>
+</a>
+<a class="article-link" href="30-tage-challenge-digitale-produkte.html">
+<img alt="Business-Arbeitsplatz als Motiv für die kostenlose 30-Tage-Challenge" src="theme-business.png"/>
+<div>
+<strong>30-Tage-Challenge für dein digitales Produkt</strong>
+<span>30 Aufgaben und ChatGPT-Prompts von der Idee bis zu Produkt, Landingpage, Content und Vermarktung.</span>
+</div>
+</a>
+<a class="article-link" href="find-remote-jobs.html" hreflang="en" lang="en">
+<img alt="Remote worker with a laptop in an open, nature-filled setting" src="remote-jobs-hero.png"/>
+<div>
+<strong>Find Remote Jobs: Work From Anywhere</strong>
+<span>English guide to legitimate remote job boards, suitable roles and stronger remote applications.</span>
+</div>
+</a>
+</div>
 </section>
 <footer>
 <a href="impressum.html">Impressum</a>
@@ -1116,49 +1043,5 @@ body::before{
 <div style="margin-top:10px;">© Smart Remote Life</div>
 </footer>
 </main>
-<aside class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-popup-title" aria-describedby="newsletter-popup-text" aria-live="polite" hidden>
-<button class="newsletter-popup-close" type="button" aria-label="Newsletter-Hinweis schließen">×</button>
-<h2 id="newsletter-popup-title">Nichts Wichtiges verpassen</h2>
-<p id="newsletter-popup-text">Melde dich zu unserem Newsletter an, um nichts Wichtiges zu verpassen. Spannende Themen rund um Sicherheit und Auswandern.</p>
-<a class="newsletter-popup-cta" href="newsletter.html">JETZT ANMELDEN</a>
-</aside>
-<script>
-(function(){
-  var key="srl_newsletter_popup_seen";
-  var popup=document.getElementById("newsletter-popup");
-  if(!popup) return;
-
-  function hasBeenSeen(){
-    try{return sessionStorage.getItem(key)==="1";}catch(error){return false;}
-  }
-
-  function markAsSeen(){
-    try{sessionStorage.setItem(key,"1");}catch(error){}
-  }
-
-  function closePopup(){
-    popup.classList.remove("is-visible");
-    popup.setAttribute("aria-hidden","true");
-    window.setTimeout(function(){popup.hidden=true;},220);
-  }
-
-  if(hasBeenSeen()) return;
-
-  var closeButton=popup.querySelector(".newsletter-popup-close");
-  if(closeButton) closeButton.addEventListener("click",closePopup);
-
-  document.addEventListener("keydown",function(event){
-    if(event.key==="Escape" && !popup.hidden) closePopup();
-  });
-
-  window.setTimeout(function(){
-    if(hasBeenSeen()) return;
-    markAsSeen();
-    popup.hidden=false;
-    popup.setAttribute("aria-hidden","false");
-    window.requestAnimationFrame(function(){popup.classList.add("is-visible");});
-  },5000);
-})();
-</script>
 </body>
 </html>
